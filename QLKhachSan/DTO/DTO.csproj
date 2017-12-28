@@ -40,8 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChatLuong.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="KhachHang.cs" />
+    <Compile Include="LoaiGiuong.cs" />
     <Compile Include="LoaiPhong.cs" />
     <Compile Include="Phong.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

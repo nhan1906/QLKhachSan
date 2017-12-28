@@ -1,9 +1,11 @@
 ﻿using DAO;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BUS
 {
@@ -28,5 +30,22 @@ namespace BUS
 
         private LoaiPhongDAO data = LoaiPhongDAO.Instance;
 
+        public void HienThiDataGridView(DataGridView dtgv)
+        {
+            dtgv.DataSource = data.LayDanhSachLoaiPhong();
+        }
+
+        public int ThemLoaiPhong(LoaiPhong loaiPhong)
+        {
+            if (data.KiemTraTonTaiCua(loaiPhong))
+            {
+                return 2;
+            }
+            if (data.ThemLoaiPhong(loaiPhong))
+            {
+                return 1;
+            }
+            return 0;
+        }
     }
 }

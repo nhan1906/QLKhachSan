@@ -35,7 +35,9 @@ E:\Git\QLKhachSan\QLKhachSan\UI\bin\Debug\DAO.pdb
 E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.csprojResolveAssemblyReference.cache
 E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.Main.resources
 E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.Properties.Resources.resources
+E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.QuanLyLoaiPhong_UC.resources
 E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.QuanLyTang_UC.resources
+E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.ThemLoaiPhong.resources
 E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.ThemTang.resources
 E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.csproj.GenerateResource.Cache
 E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.exe

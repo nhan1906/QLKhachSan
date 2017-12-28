@@ -58,8 +58,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChatLuongService.cs" />
     <Compile Include="FormatViewServices.cs" />
     <Compile Include="KhachHangService.cs" />
+    <Compile Include="LoaiGiuongService.cs" />
     <Compile Include="LoaiPhongService.cs" />
     <Compile Include="PhongService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

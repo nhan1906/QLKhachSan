@@ -32,9 +32,7 @@
             this.btnPower = new System.Windows.Forms.Button();
             this.pnMenu = new System.Windows.Forms.Panel();
             this.pnContainer = new System.Windows.Forms.Panel();
-            this.quanLyTang_UC1 = new UI.QuanLyTang_UC();
             this.pnBar.SuspendLayout();
-            this.pnContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnBar
@@ -70,21 +68,11 @@
             // 
             // pnContainer
             // 
-            this.pnContainer.Controls.Add(this.quanLyTang_UC1);
             this.pnContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnContainer.Location = new System.Drawing.Point(150, 30);
             this.pnContainer.Name = "pnContainer";
             this.pnContainer.Size = new System.Drawing.Size(650, 570);
             this.pnContainer.TabIndex = 4;
-            // 
-            // quanLyTang_UC1
-            // 
-            this.quanLyTang_UC1.BackColor = System.Drawing.Color.White;
-            this.quanLyTang_UC1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.quanLyTang_UC1.Location = new System.Drawing.Point(0, 0);
-            this.quanLyTang_UC1.Name = "quanLyTang_UC1";
-            this.quanLyTang_UC1.Size = new System.Drawing.Size(650, 570);
-            this.quanLyTang_UC1.TabIndex = 0;
             // 
             // Main
             // 
@@ -102,7 +90,6 @@
             this.Text = "Main";
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Main_KeyPress);
             this.pnBar.ResumeLayout(false);
-            this.pnContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -112,7 +99,6 @@
         private System.Windows.Forms.Button btnPower;
         private System.Windows.Forms.Panel pnMenu;
         private System.Windows.Forms.Panel pnContainer;
-        private QuanLyTang_UC quanLyTang_UC1;
     }
 }
 

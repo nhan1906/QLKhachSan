@@ -31,20 +31,20 @@
             this.pnRight = new System.Windows.Forms.Panel();
             this.pnLeft = new System.Windows.Forms.Panel();
             this.pnThaoTac = new System.Windows.Forms.Panel();
+            this.txtTangThu = new MetroFramework.Controls.MetroTextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnContainer = new System.Windows.Forms.Panel();
-            this.pnTruocSau = new System.Windows.Forms.Panel();
-            this.btnTruoc = new System.Windows.Forms.Button();
-            this.btnSau = new System.Windows.Forms.Button();
             this.dtgvTang = new System.Windows.Forms.DataGridView();
-            this.txtTangThu = new MetroFramework.Controls.MetroTextBox();
+            this.pnTruocSau = new System.Windows.Forms.Panel();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
+            this.btnSau = new System.Windows.Forms.Button();
+            this.btnTruoc = new System.Windows.Forms.Button();
             this.pnThaoTac.SuspendLayout();
             this.pnContainer.SuspendLayout();
-            this.pnTruocSau.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTang)).BeginInit();
+            this.pnTruocSau.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnRight
@@ -72,6 +72,39 @@
             this.pnThaoTac.Name = "pnThaoTac";
             this.pnThaoTac.Size = new System.Drawing.Size(610, 50);
             this.pnThaoTac.TabIndex = 3;
+            // 
+            // txtTangThu
+            // 
+            // 
+            // 
+            // 
+            this.txtTangThu.CustomButton.Image = null;
+            this.txtTangThu.CustomButton.Location = new System.Drawing.Point(272, 1);
+            this.txtTangThu.CustomButton.Name = "";
+            this.txtTangThu.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtTangThu.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtTangThu.CustomButton.TabIndex = 1;
+            this.txtTangThu.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtTangThu.CustomButton.UseSelectable = true;
+            this.txtTangThu.CustomButton.Visible = false;
+            this.txtTangThu.Lines = new string[0];
+            this.txtTangThu.Location = new System.Drawing.Point(207, 15);
+            this.txtTangThu.MaxLength = 32767;
+            this.txtTangThu.Name = "txtTangThu";
+            this.txtTangThu.PasswordChar = '\0';
+            this.txtTangThu.PromptText = "Nhập tầng thứ";
+            this.txtTangThu.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtTangThu.SelectedText = "";
+            this.txtTangThu.SelectionLength = 0;
+            this.txtTangThu.SelectionStart = 0;
+            this.txtTangThu.ShortcutsEnabled = true;
+            this.txtTangThu.Size = new System.Drawing.Size(294, 23);
+            this.txtTangThu.TabIndex = 1;
+            this.txtTangThu.UseSelectable = true;
+            this.txtTangThu.Visible = false;
+            this.txtTangThu.WaterMark = "Nhập tầng thứ";
+            this.txtTangThu.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtTangThu.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // btnAdd
             // 
@@ -110,6 +143,16 @@
             this.pnContainer.Size = new System.Drawing.Size(610, 500);
             this.pnContainer.TabIndex = 5;
             // 
+            // dtgvTang
+            // 
+            this.dtgvTang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvTang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgvTang.Location = new System.Drawing.Point(0, 0);
+            this.dtgvTang.Name = "dtgvTang";
+            this.dtgvTang.Size = new System.Drawing.Size(610, 400);
+            this.dtgvTang.TabIndex = 1;
+            this.dtgvTang.SelectionChanged += new System.EventHandler(this.dtgvTang_SelectionChanged);
+            // 
             // pnTruocSau
             // 
             this.pnTruocSau.Controls.Add(this.btnCapNhat);
@@ -121,79 +164,6 @@
             this.pnTruocSau.Name = "pnTruocSau";
             this.pnTruocSau.Size = new System.Drawing.Size(610, 100);
             this.pnTruocSau.TabIndex = 0;
-            // 
-            // btnTruoc
-            // 
-            this.btnTruoc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTruoc.BackColor = System.Drawing.Color.Black;
-            this.btnTruoc.FlatAppearance.BorderSize = 0;
-            this.btnTruoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTruoc.ForeColor = System.Drawing.Color.White;
-            this.btnTruoc.Location = new System.Drawing.Point(435, 16);
-            this.btnTruoc.Name = "btnTruoc";
-            this.btnTruoc.Size = new System.Drawing.Size(75, 23);
-            this.btnTruoc.TabIndex = 0;
-            this.btnTruoc.Text = "Trước";
-            this.btnTruoc.UseVisualStyleBackColor = false;
-            this.btnTruoc.Click += new System.EventHandler(this.btnTruoc_Click);
-            // 
-            // btnSau
-            // 
-            this.btnSau.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSau.BackColor = System.Drawing.Color.Black;
-            this.btnSau.FlatAppearance.BorderSize = 0;
-            this.btnSau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSau.ForeColor = System.Drawing.Color.White;
-            this.btnSau.Location = new System.Drawing.Point(516, 16);
-            this.btnSau.Name = "btnSau";
-            this.btnSau.Size = new System.Drawing.Size(75, 23);
-            this.btnSau.TabIndex = 1;
-            this.btnSau.Text = "Sau";
-            this.btnSau.UseVisualStyleBackColor = false;
-            this.btnSau.Click += new System.EventHandler(this.btnSau_Click);
-            // 
-            // dtgvTang
-            // 
-            this.dtgvTang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvTang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgvTang.Location = new System.Drawing.Point(0, 0);
-            this.dtgvTang.Name = "dtgvTang";
-            this.dtgvTang.Size = new System.Drawing.Size(610, 400);
-            this.dtgvTang.TabIndex = 1;
-            this.dtgvTang.SelectionChanged += new System.EventHandler(this.dtgvTang_SelectionChanged);
-            // 
-            // txtTangThu
-            // 
-            // 
-            // 
-            // 
-            this.txtTangThu.CustomButton.Image = null;
-            this.txtTangThu.CustomButton.Location = new System.Drawing.Point(272, 1);
-            this.txtTangThu.CustomButton.Name = "";
-            this.txtTangThu.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtTangThu.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtTangThu.CustomButton.TabIndex = 1;
-            this.txtTangThu.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtTangThu.CustomButton.UseSelectable = true;
-            this.txtTangThu.CustomButton.Visible = false;
-            this.txtTangThu.Lines = new string[0];
-            this.txtTangThu.Location = new System.Drawing.Point(207, 15);
-            this.txtTangThu.MaxLength = 32767;
-            this.txtTangThu.Name = "txtTangThu";
-            this.txtTangThu.PasswordChar = '\0';
-            this.txtTangThu.PromptText = "Nhập tầng thứ";
-            this.txtTangThu.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtTangThu.SelectedText = "";
-            this.txtTangThu.SelectionLength = 0;
-            this.txtTangThu.SelectionStart = 0;
-            this.txtTangThu.ShortcutsEnabled = true;
-            this.txtTangThu.Size = new System.Drawing.Size(294, 23);
-            this.txtTangThu.TabIndex = 1;
-            this.txtTangThu.UseSelectable = true;
-            this.txtTangThu.Visible = false;
-            this.txtTangThu.WaterMark = "Nhập tầng thứ";
-            this.txtTangThu.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtTangThu.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // btnCapNhat
             // 
@@ -225,6 +195,36 @@
             this.btnHuy.UseVisualStyleBackColor = false;
             this.btnHuy.Visible = false;
             // 
+            // btnSau
+            // 
+            this.btnSau.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSau.BackColor = System.Drawing.Color.Black;
+            this.btnSau.FlatAppearance.BorderSize = 0;
+            this.btnSau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSau.ForeColor = System.Drawing.Color.White;
+            this.btnSau.Location = new System.Drawing.Point(516, 16);
+            this.btnSau.Name = "btnSau";
+            this.btnSau.Size = new System.Drawing.Size(75, 23);
+            this.btnSau.TabIndex = 1;
+            this.btnSau.Text = "Sau";
+            this.btnSau.UseVisualStyleBackColor = false;
+            this.btnSau.Click += new System.EventHandler(this.btnSau_Click);
+            // 
+            // btnTruoc
+            // 
+            this.btnTruoc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTruoc.BackColor = System.Drawing.Color.Black;
+            this.btnTruoc.FlatAppearance.BorderSize = 0;
+            this.btnTruoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTruoc.ForeColor = System.Drawing.Color.White;
+            this.btnTruoc.Location = new System.Drawing.Point(435, 16);
+            this.btnTruoc.Name = "btnTruoc";
+            this.btnTruoc.Size = new System.Drawing.Size(75, 23);
+            this.btnTruoc.TabIndex = 0;
+            this.btnTruoc.Text = "Trước";
+            this.btnTruoc.UseVisualStyleBackColor = false;
+            this.btnTruoc.Click += new System.EventHandler(this.btnTruoc_Click);
+            // 
             // QuanLyTang_UC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -239,8 +239,8 @@
             this.Size = new System.Drawing.Size(650, 570);
             this.pnThaoTac.ResumeLayout(false);
             this.pnContainer.ResumeLayout(false);
-            this.pnTruocSau.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTang)).EndInit();
+            this.pnTruocSau.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
