@@ -1,0 +1,13 @@
+E:\OAD\QLKhachSan\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+E:\OAD\QLKhachSan\BUS\bin\Debug\BUS.dll
+E:\OAD\QLKhachSan\BUS\bin\Debug\BUS.pdb
+E:\OAD\QLKhachSan\BUS\bin\Debug\DAO.dll
+E:\OAD\QLKhachSan\BUS\bin\Debug\DTO.dll
+E:\OAD\QLKhachSan\BUS\bin\Debug\MetroFramework.Design.dll
+E:\OAD\QLKhachSan\BUS\bin\Debug\MetroFramework.dll
+E:\OAD\QLKhachSan\BUS\bin\Debug\MetroFramework.Fonts.dll
+E:\OAD\QLKhachSan\BUS\bin\Debug\Tulpep.NotificationWindow.dll
+E:\OAD\QLKhachSan\BUS\bin\Debug\DAO.pdb
+E:\OAD\QLKhachSan\BUS\bin\Debug\DTO.pdb
+E:\OAD\QLKhachSan\BUS\obj\Debug\BUS.dll
+E:\OAD\QLKhachSan\BUS\obj\Debug\BUS.pdb
