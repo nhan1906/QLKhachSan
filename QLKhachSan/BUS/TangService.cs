@@ -31,9 +31,9 @@ namespace BUS
 
         private TangDAO data = TangDAO.Instance;
 
-        public void HienThiDataGridView(BindingSource binding)
+        public void HienThiDataGridView(BindingSource binding, int trangThu , int soPhanTuTrang)
         {
-            binding.DataSource = data.LayDanhSachTang();
+            binding.DataSource = data.LayDanhSachTang(trangThu , soPhanTuTrang);
         }
 
         public void LayTangTiepTheo(MetroTextBox txtTangThu)
@@ -101,6 +101,11 @@ namespace BUS
             {
                 //Hiển thị thông báo thêm thất bại
             }
+        }
+
+        public int SoTang()
+        {
+            return data.LaySoTang();
         }
     }
 }

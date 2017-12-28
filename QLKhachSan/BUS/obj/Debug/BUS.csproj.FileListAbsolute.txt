@@ -11,3 +11,16 @@ E:\OAD\QLKhachSan\BUS\bin\Debug\DAO.pdb
 E:\OAD\QLKhachSan\BUS\bin\Debug\DTO.pdb
 E:\OAD\QLKhachSan\BUS\obj\Debug\BUS.dll
 E:\OAD\QLKhachSan\BUS\obj\Debug\BUS.pdb
+E:\Git\QLKhachSan\QLKhachSan\BUS\bin\Debug\BUS.dll
+E:\Git\QLKhachSan\QLKhachSan\BUS\bin\Debug\BUS.pdb
+E:\Git\QLKhachSan\QLKhachSan\BUS\bin\Debug\DAO.dll
+E:\Git\QLKhachSan\QLKhachSan\BUS\bin\Debug\DTO.dll
+E:\Git\QLKhachSan\QLKhachSan\BUS\bin\Debug\MetroFramework.Design.dll
+E:\Git\QLKhachSan\QLKhachSan\BUS\bin\Debug\MetroFramework.dll
+E:\Git\QLKhachSan\QLKhachSan\BUS\bin\Debug\MetroFramework.Fonts.dll
+E:\Git\QLKhachSan\QLKhachSan\BUS\bin\Debug\Tulpep.NotificationWindow.dll
+E:\Git\QLKhachSan\QLKhachSan\BUS\bin\Debug\DAO.pdb
+E:\Git\QLKhachSan\QLKhachSan\BUS\bin\Debug\DTO.pdb
+E:\Git\QLKhachSan\QLKhachSan\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+E:\Git\QLKhachSan\QLKhachSan\BUS\obj\Debug\BUS.dll
+E:\Git\QLKhachSan\QLKhachSan\BUS\obj\Debug\BUS.pdb

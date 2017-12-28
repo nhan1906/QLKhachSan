@@ -33,7 +33,18 @@ namespace DAO
         public List<Tang> LayDanhSachTang()
         {
             List<Tang> list = new List<Tang>();
-            DataTable data = provider.ExecuteQuery("select * from Tang");
+            DataTable data = provider.ExecuteQuery("Select * from Tang");
+            foreach (DataRow row in data.Rows)
+            {
+                list.Add(new Tang(row));
+            }
+            return list;
+        }
+
+        public List<Tang> LayDanhSachTang(int trangThu, int soPhanTuTrang)
+        {
+            List<Tang> list = new List<Tang>();
+            DataTable data = provider.ExecuteQuery("PhanTrangTheo @page , @number" ,new object[] { trangThu, soPhanTuTrang} );
             foreach (DataRow row in data.Rows)
             {
                 list.Add(new Tang(row));
@@ -50,6 +61,11 @@ namespace DAO
             else
                 tangThu++;
             return (int) tangThu;
+        }
+
+        public int LaySoTang()
+        {
+            return provider.ExecuteQuery("select * from Tang").Rows.Count;
         }
 
         public bool ThemTang(Tang tang)

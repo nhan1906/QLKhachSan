@@ -2,3 +2,7 @@ E:\OAD\QLKhachSan\DTO\bin\Debug\DTO.dll
 E:\OAD\QLKhachSan\DTO\bin\Debug\DTO.pdb
 E:\OAD\QLKhachSan\DTO\obj\Debug\DTO.dll
 E:\OAD\QLKhachSan\DTO\obj\Debug\DTO.pdb
+E:\Git\QLKhachSan\QLKhachSan\DTO\bin\Debug\DTO.dll
+E:\Git\QLKhachSan\QLKhachSan\DTO\bin\Debug\DTO.pdb
+E:\Git\QLKhachSan\QLKhachSan\DTO\obj\Debug\DTO.dll
+E:\Git\QLKhachSan\QLKhachSan\DTO\obj\Debug\DTO.pdb

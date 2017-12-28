@@ -45,10 +45,6 @@ namespace UI
             {
                 error.SetError(txtTangThu, "Đã tồn tại tầng " + tang.TangThu);
             }
-            if (i == 1)
-            {
-                QuanLyTang_UC.Instance.CapNhat();
-            }
         }
 
         private void txtTangThu_KeyPress(object sender, KeyPressEventArgs e)

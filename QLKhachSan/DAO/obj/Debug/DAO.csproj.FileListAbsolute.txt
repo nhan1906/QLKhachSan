@@ -5,3 +5,10 @@ E:\OAD\QLKhachSan\DAO\bin\Debug\DTO.pdb
 E:\OAD\QLKhachSan\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
 E:\OAD\QLKhachSan\DAO\obj\Debug\DAO.dll
 E:\OAD\QLKhachSan\DAO\obj\Debug\DAO.pdb
+E:\Git\QLKhachSan\QLKhachSan\DAO\bin\Debug\DAO.dll
+E:\Git\QLKhachSan\QLKhachSan\DAO\bin\Debug\DAO.pdb
+E:\Git\QLKhachSan\QLKhachSan\DAO\bin\Debug\DTO.dll
+E:\Git\QLKhachSan\QLKhachSan\DAO\bin\Debug\DTO.pdb
+E:\Git\QLKhachSan\QLKhachSan\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+E:\Git\QLKhachSan\QLKhachSan\DAO\obj\Debug\DAO.dll
+E:\Git\QLKhachSan\QLKhachSan\DAO\obj\Debug\DAO.pdb
