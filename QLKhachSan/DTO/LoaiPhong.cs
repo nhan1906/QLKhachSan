@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,7 @@ namespace DTO
         private float giaDem;
         private float giaNgay;
         private int soNguoiToiDa;
+        private byte[] hinhMoTa; 
 
         public string MaLoaiPhong
         {
@@ -108,6 +110,19 @@ namespace DTO
             }
         }
 
+        public byte[] HinhMoTa
+        {
+            get
+            {
+                return hinhMoTa;
+            }
+
+            set
+            {
+                hinhMoTa = value;
+            }
+        }
+
         public LoaiPhong() { }
 
         public LoaiPhong(DataRow row)
@@ -121,6 +136,8 @@ namespace DTO
             GiaNgay = (float)Convert.ToDouble(row["giaNgay"].ToString());
 
             SoNguoiToiDa = (int)row["soNguoiToiDa"];
+
+            HinhMoTa = (byte[])row["hinhMoTa"];
         }
     }
 }

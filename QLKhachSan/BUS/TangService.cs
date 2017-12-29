@@ -25,8 +25,8 @@ namespace BUS
             }
         }
 
-        private TangService() { }
 
+        private TangService() { }
         #endregion
 
         private TangDAO data = TangDAO.Instance;
@@ -48,6 +48,19 @@ namespace BUS
             cmb.DisplayMember = "tenTang";
         }
 
+
+        public void HienThiComboBoxAll(MetroComboBox cmb)
+        {
+            List<Tang> list = data.LayDanhSachTang();
+
+            Tang tang = new Tang();
+            tang.TenTang = "---Tất cả---";
+            tang.TangThu = -1;
+            list.Add(tang);
+            cmb.DataSource = list;
+            cmb.DisplayMember = "tenTang";
+            cmb.SelectedIndex = cmb.Items.Count - 1;
+        }
         public int ThemTang(Tang tang)
         {
             if (data.TangThuDaTonTai(tang.TangThu))

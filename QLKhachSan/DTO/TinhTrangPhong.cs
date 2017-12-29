@@ -9,26 +9,16 @@ namespace DTO
 {
     public class TinhTrangPhong
     {
-        private int maTinhTrangPhong;
         private string tenTinhTrangPhong;
 
         public TinhTrangPhong(DataRow row)
         {
-            MaTinhTrangPhong = (int)row["maTinhTrangPhong"];
             TenTinhTrangPhong = row["tenTinhTrangPhong"].ToString();
         }
 
-        public int MaTinhTrangPhong
+        public TinhTrangPhong()
         {
-            get
-            {
-                return maTinhTrangPhong;
-            }
 
-            set
-            {
-                maTinhTrangPhong = value;
-            }
         }
 
         public string TenTinhTrangPhong

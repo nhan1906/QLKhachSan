@@ -8,11 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
+using DTO;
+using System.IO;
 
 namespace UI
 {
     public partial class QuanLyLoaiPhong_UC : UserControl
     {
+
+        private static QuanLyLoaiPhong_UC instance;
+        public delegate void SendMessage(Panel Message);
+        public SendMessage Sender;
+        private Panel pnContaner;
+        private void GetMessage(Panel Message)
+        {
+            pnContaner = Message;
+        }
+
 
         private LoaiPhongService loaiPhongService = LoaiPhongService.Instance;
         private FormatViewServices formatView = FormatViewServices.Instance;
@@ -20,11 +32,25 @@ namespace UI
         private List<Button> buttonSuas = new List<Button>();
         private List<Button> buttonXoas = new List<Button>();
 
+        public static QuanLyLoaiPhong_UC Instance
+        {
+            get
+            {
+                if (instance == null)
+                    instance = new QuanLyLoaiPhong_UC();
+                return instance;
+            }
+        }
+
         public QuanLyLoaiPhong_UC()
         {
             InitializeComponent();
+
+            Sender = new SendMessage(GetMessage);
+
             formatView.FormatDataGridView(dtgvLoaiPhong);
             loaiPhongService.HienThiDataGridView(dtgvLoaiPhong);
+
             dtgvLoaiPhong.Columns.Add("thaoTac", "Thao tác");
 
             dtgvLoaiPhong.Columns[7].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -35,6 +61,7 @@ namespace UI
             dtgvLoaiPhong.Columns[4].Width = 120;
             dtgvLoaiPhong.Columns[5].Width = 120;
             dtgvLoaiPhong.Columns[6].Width = 100;
+            dtgvLoaiPhong.Columns[7].Width = 200;
 
             dtgvLoaiPhong.Columns[0].HeaderText = "Mã loại phòng";
             dtgvLoaiPhong.Columns[1].HeaderText = "Tên chất lượng";
@@ -123,5 +150,15 @@ namespace UI
             }
         }
 
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if (!pnContaner.Controls.ContainsKey("ThemLoaiPhong"))
+            {
+                ThemLoaiPhong uc = ThemLoaiPhong.Instance;
+                uc.Dock = DockStyle.Fill;
+                pnContaner.Controls.Add(uc);
+            }
+            pnContaner.Controls["ThemLoaiPhong"].BringToFront();
+        }
     }
 }

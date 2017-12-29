@@ -53,7 +53,7 @@ namespace BUS
             dtgv.DefaultCellStyle = dataGridViewCellStyle2;
             dtgv.GridColor = Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             dtgv.ReadOnly = true;
-            dtgv.RowTemplate.Height = 36;
+            dtgv.RowTemplate.Height = 100;
             //
             dtgv.RowHeadersVisible = false;
 

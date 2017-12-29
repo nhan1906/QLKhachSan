@@ -62,6 +62,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatPhong_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DatPhong_UC.Designer.cs">
+      <DependentUpon>DatPhong_UC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,11 +82,29 @@
     <Compile Include="QuanLyLoaiPhong_UC.Designer.cs">
       <DependentUpon>QuanLyLoaiPhong_UC.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyPhong_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QuanLyPhong_UC.Designer.cs">
+      <DependentUpon>QuanLyPhong_UC.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyTang_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="QuanLyTang_UC.Designer.cs">
       <DependentUpon>QuanLyTang_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SoDoPhong_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SoDoPhong_UC.Designer.cs">
+      <DependentUpon>SoDoPhong_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuaPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuaPhong.Designer.cs">
+      <DependentUpon>SuaPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="ThemLoaiPhong.cs">
       <SubType>UserControl</SubType>
@@ -88,12 +112,21 @@
     <Compile Include="ThemLoaiPhong.Designer.cs">
       <DependentUpon>ThemLoaiPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThemPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemPhong.Designer.cs">
+      <DependentUpon>ThemPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThemTang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ThemTang.Designer.cs">
       <DependentUpon>ThemTang.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DatPhong_UC.resx">
+      <DependentUpon>DatPhong_UC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,11 +143,23 @@
     <EmbeddedResource Include="QuanLyLoaiPhong_UC.resx">
       <DependentUpon>QuanLyLoaiPhong_UC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyPhong_UC.resx">
+      <DependentUpon>QuanLyPhong_UC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLyTang_UC.resx">
       <DependentUpon>QuanLyTang_UC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SoDoPhong_UC.resx">
+      <DependentUpon>SoDoPhong_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuaPhong.resx">
+      <DependentUpon>SuaPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThemLoaiPhong.resx">
       <DependentUpon>ThemLoaiPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemPhong.resx">
+      <DependentUpon>ThemPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemTang.resx">
       <DependentUpon>ThemTang.cs</DependentUpon>

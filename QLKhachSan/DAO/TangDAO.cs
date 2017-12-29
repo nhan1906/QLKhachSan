@@ -89,5 +89,10 @@ namespace DAO
         {
             return true;
         }
+
+        public void CapNhatTang(int tangThu)
+        {
+            provider.ExecuteNonQuery("Update Tang Set soPhong = soPhong + 1 Where tangThu = " + tangThu);
+        }
     }
 }

@@ -49,6 +49,8 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnChonHinh = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.lbmaLoaiPhong = new MetroFramework.Controls.MetroLabel();
             this.maLoaiPhongLB = new MetroFramework.Controls.MetroLabel();
@@ -59,10 +61,12 @@
             this.txtGio = new MetroFramework.Controls.MetroTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.error = new System.Windows.Forms.ErrorProvider(this.components);
+            this.openDialog = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.nmNguoiToiDa)).BeginInit();
             this.panel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             this.SuspendLayout();
@@ -298,6 +302,8 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.btnChonHinh);
+            this.panel5.Controls.Add(this.pictureBox1);
             this.panel5.Controls.Add(this.metroLabel9);
             this.panel5.Controls.Add(this.lbmaLoaiPhong);
             this.panel5.Controls.Add(this.maLoaiPhongLB);
@@ -324,10 +330,28 @@
             this.panel5.Size = new System.Drawing.Size(604, 494);
             this.panel5.TabIndex = 0;
             // 
+            // btnChonHinh
+            // 
+            this.btnChonHinh.Location = new System.Drawing.Point(477, 97);
+            this.btnChonHinh.Name = "btnChonHinh";
+            this.btnChonHinh.Size = new System.Drawing.Size(108, 23);
+            this.btnChonHinh.TabIndex = 26;
+            this.btnChonHinh.Text = "btnChonHinh";
+            this.btnChonHinh.UseVisualStyleBackColor = true;
+            this.btnChonHinh.Click += new System.EventHandler(this.btnChonHinh_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(477, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(108, 72);
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
+            // 
             // metroLabel9
             // 
             this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(269, 72);
+            this.metroLabel9.Location = new System.Drawing.Point(126, 105);
             this.metroLabel9.Name = "metroLabel9";
             this.metroLabel9.Size = new System.Drawing.Size(129, 19);
             this.metroLabel9.TabIndex = 23;
@@ -518,6 +542,11 @@
             // 
             this.error.ContainerControl = this;
             // 
+            // openDialog
+            // 
+            this.openDialog.FileName = "openFileDialog1";
+            this.openDialog.Filter = "\"JPG Files (*.jpg)|*.jpg|GIF Files (*.gif)|*.gif|All Files (*.*)|*.*\"";
+            // 
             // ThemLoaiPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -532,6 +561,7 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
             this.ResumeLayout(false);
@@ -569,5 +599,8 @@
         private MetroFramework.Controls.MetroLabel lbmaLoaiPhong;
         private MetroFramework.Controls.MetroLabel maLoaiPhongLB;
         private System.Windows.Forms.ErrorProvider error;
+        private System.Windows.Forms.Button btnChonHinh;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.OpenFileDialog openDialog;
     }
 }

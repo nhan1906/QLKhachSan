@@ -22,5 +22,7 @@ E:\Git\QLKhachSan\QLKhachSan\BUS\bin\Debug\Tulpep.NotificationWindow.dll
 E:\Git\QLKhachSan\QLKhachSan\BUS\bin\Debug\DAO.pdb
 E:\Git\QLKhachSan\QLKhachSan\BUS\bin\Debug\DTO.pdb
 E:\Git\QLKhachSan\QLKhachSan\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+E:\Git\QLKhachSan\QLKhachSan\BUS\obj\Debug\BUS.Properties.Resources.resources
+E:\Git\QLKhachSan\QLKhachSan\BUS\obj\Debug\BUS.csproj.GenerateResource.Cache
 E:\Git\QLKhachSan\QLKhachSan\BUS\obj\Debug\BUS.dll
 E:\Git\QLKhachSan\QLKhachSan\BUS\obj\Debug\BUS.pdb

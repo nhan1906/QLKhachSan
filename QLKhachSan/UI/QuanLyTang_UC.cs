@@ -17,6 +17,15 @@ namespace UI
 
         private static QuanLyTang_UC instance;
 
+
+        public delegate void SendMessage(Panel Message);
+        public SendMessage Sender;
+        private Panel pnContaner;
+        private void GetMessage(Panel Message)
+        {
+            pnContaner = Message;
+        }
+
         private BindingSource bingding = new BindingSource();
         private TangService tangService = TangService.Instance;
         private FormatViewServices formatView = FormatViewServices.Instance;
@@ -195,7 +204,7 @@ namespace UI
         public QuanLyTang_UC()
         {
             InitializeComponent();
-
+            Sender = new SendMessage(GetMessage);
             //1 trang tối đa 20 phần tử
             soPhanTuTrang = 15;
             XacDinhTrang();

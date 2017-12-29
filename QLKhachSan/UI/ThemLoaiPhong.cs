@@ -10,15 +10,31 @@ using System.Windows.Forms;
 using BUS;
 using MetroFramework.Controls;
 using DTO;
+using System.IO;
+using System.Drawing.Imaging;
 
 namespace UI
 {
     public partial class ThemLoaiPhong : UserControl
     {
 
+        private static ThemLoaiPhong instance;
+
         private ChatLuongService chatLuongService = ChatLuongService.Instance;
         private LoaiGiuongService loaiGiuongService = LoaiGiuongService.Instance;
         private LoaiPhongService loaiPhongService = LoaiPhongService.Instance;
+
+        private string imgLoc;
+
+        public static ThemLoaiPhong Instance
+        {
+            get
+            {
+                if (instance == null)
+                    instance = new ThemLoaiPhong();
+                return instance;
+            }
+        }
 
         public ThemLoaiPhong()
         {
@@ -42,6 +58,7 @@ namespace UI
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+
             if (Save())
             {
                 txtGio.Text = "";
@@ -55,13 +72,28 @@ namespace UI
             if (KiemTra())
                 return false;
             LoaiPhong loaiPhong = new LoaiPhong();
+            byte[] img = null;
+            try
+            {
+                FileStream fs = new FileStream(imgLoc, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(fs);
+                img = br.ReadBytes((int)fs.Length);
+            }
+            catch(Exception ex)
+            {
+
+            }
+            loaiPhong.HinhMoTa = img;
+            
             loaiPhong.MaLoaiPhong = maLoaiPhongLB.Text;
             ChatLuong chatLuong = (ChatLuong)cmbChatLuong.SelectedItem;
             LoaiGiuong loaiGiuong = (LoaiGiuong)cmbLoaiGiuong.SelectedItem;
             loaiPhong.TenChatLuong = chatLuong.TenChatLuong;
             loaiPhong.TenLoaiGiuong = loaiGiuong.TenLoaiGiuong;
-            loaiPhong.GiaGio = Convert.ToInt32(txtGio.Text);
-            loaiPhong.GiaDem = Convert.ToInt32(txtDem.Text);
+            if(txtGio.Text != "")
+                loaiPhong.GiaGio = Convert.ToInt32(txtGio.Text);
+            if(txtDem.Text != "")
+                loaiPhong.GiaDem = Convert.ToInt32(txtDem.Text);
             loaiPhong.GiaNgay = Convert.ToInt32(txtNgay.Text);
             loaiPhong.SoNguoiToiDa = (int) nmNguoiToiDa.Value;
             int result = loaiPhongService.ThemLoaiPhong(loaiPhong);
@@ -126,6 +158,19 @@ namespace UI
         {
             if(cmbLoaiGiuong.SelectedItem != null)
                 chatLuongService.ThayDoiMa(cmbChatLuong, cmbLoaiGiuong, maLoaiPhongLB);
+        }
+
+        private void btnChonHinh_Click(object sender, EventArgs e)
+        {
+
+            openDialog.ShowDialog();
+            string file = openDialog.FileName;
+            if (string.IsNullOrEmpty(file))
+                return;
+            Image image = Image.FromFile(file);
+            pictureBox1.Image = image;
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            imgLoc = openDialog.FileName.ToString();
         }
     }
 }

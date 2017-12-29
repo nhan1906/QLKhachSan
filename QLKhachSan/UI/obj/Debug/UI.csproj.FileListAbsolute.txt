@@ -36,9 +36,14 @@ E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.csprojResolveAssemblyReference.cach
 E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.Main.resources
 E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.Properties.Resources.resources
 E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.QuanLyLoaiPhong_UC.resources
+E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.QuanLyPhong_UC.resources
 E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.QuanLyTang_UC.resources
 E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.ThemLoaiPhong.resources
+E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.ThemPhong.resources
 E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.ThemTang.resources
 E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.csproj.GenerateResource.Cache
 E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.exe
 E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.pdb
+E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.SuaPhong.resources
+E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.SoDoPhong_UC.resources
+E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.DatPhong_UC.resources

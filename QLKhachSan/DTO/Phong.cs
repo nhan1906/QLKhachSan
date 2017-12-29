@@ -10,14 +10,48 @@ namespace DTO
     public class Phong
     {
         private int maPhong;
-        private string maLoaiPhong;
+        private int phongSo;
         private int tangThu;
+        private string maLoaiPhong;
+        private string tenTinhTrangPhong;
 
-        public Phong() { }
-
-        public Phong(DataRow row)
+        public int MaPhong
         {
+            get
+            {
+                return maPhong;
+            }
 
+            set
+            {
+                maPhong = value;
+            }
+        }
+
+        public int PhongSo
+        {
+            get
+            {
+                return phongSo;
+            }
+
+            set
+            {
+                phongSo = value;
+            }
+        }
+
+        public int TangThu
+        {
+            get
+            {
+                return tangThu;
+            }
+
+            set
+            {
+                tangThu = value;
+            }
         }
 
         public string MaLoaiPhong
@@ -33,17 +67,28 @@ namespace DTO
             }
         }
 
-        public int TangThu
+        public string TenTinhTrangPhong
         {
             get
             {
-                return tangThu;
+                return tenTinhTrangPhong;
             }
 
             set
             {
-                tangThu = value;
+                tenTinhTrangPhong = value;
             }
+        }
+
+        public Phong() { }
+
+        public Phong(DataRow row)
+        {
+            MaPhong = (int)row["maPhong"];
+            PhongSo = (int)row["phongSo"];
+            TangThu = (int)row["tangThu"];
+            MaLoaiPhong = row["maLoaiPhong"].ToString();
+            TenTinhTrangPhong = row["tenTinhTrangPhong"].ToString();
         }
     }
 }
