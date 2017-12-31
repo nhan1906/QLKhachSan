@@ -72,18 +72,13 @@ namespace UI
             if (KiemTra())
                 return false;
             LoaiPhong loaiPhong = new LoaiPhong();
-            byte[] img = null;
-            try
+            MemoryStream stream = new MemoryStream();
+            if(pictureBox1.Image != null)
             {
-                FileStream fs = new FileStream(imgLoc, FileMode.Open, FileAccess.Read);
-                BinaryReader br = new BinaryReader(fs);
-                img = br.ReadBytes((int)fs.Length);
+                Image imgSave = resizeImage(pictureBox1.Image, 108 , 72);
+                imgSave.Save(stream, ImageFormat.Jpeg);
+                loaiPhong.HinhMoTa = stream.ToArray();
             }
-            catch(Exception ex)
-            {
-
-            }
-            loaiPhong.HinhMoTa = img;
             
             loaiPhong.MaLoaiPhong = maLoaiPhongLB.Text;
             ChatLuong chatLuong = (ChatLuong)cmbChatLuong.SelectedItem;
@@ -100,6 +95,17 @@ namespace UI
             if (result == 1)
                 return true;
             return false;
+        }
+
+        public Image resizeImage(Image img, int width, int height)
+        {
+            Bitmap b = new Bitmap(width, height);
+            Graphics g = Graphics.FromImage((Image)b);
+
+            g.DrawImage(img, 0, 0, width, height);
+            g.Dispose();
+
+            return (Image)b;
         }
 
         private bool KiemTra()

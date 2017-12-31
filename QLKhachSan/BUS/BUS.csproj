@@ -58,11 +58,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BangHienTrangPhongDatService.cs" />
     <Compile Include="ChatLuongService.cs" />
+    <Compile Include="ChiTietDatPhongService.cs" />
+    <Compile Include="DanhSachPhongConTrongServices.cs" />
+    <Compile Include="DatPhongService.cs" />
     <Compile Include="FormatViewServices.cs" />
     <Compile Include="KhachHangService.cs" />
     <Compile Include="LoaiGiuongService.cs" />
     <Compile Include="LoaiPhongService.cs" />
+    <Compile Include="PhieuDatPhongService.cs" />
     <Compile Include="PhongService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">

@@ -47,3 +47,4 @@ E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.pdb
 E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.SuaPhong.resources
 E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.SoDoPhong_UC.resources
 E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.DatPhong_UC.resources
+E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.ThongBaoDatPhongThanhCong.resources

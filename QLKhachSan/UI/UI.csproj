@@ -124,6 +124,12 @@
     <Compile Include="ThemTang.Designer.cs">
       <DependentUpon>ThemTang.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThongBaoDatPhongThanhCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongBaoDatPhongThanhCong.Designer.cs">
+      <DependentUpon>ThongBaoDatPhongThanhCong.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DatPhong_UC.resx">
       <DependentUpon>DatPhong_UC.cs</DependentUpon>
     </EmbeddedResource>
@@ -163,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThemTang.resx">
       <DependentUpon>ThemTang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongBaoDatPhongThanhCong.resx">
+      <DependentUpon>ThongBaoDatPhongThanhCong.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
