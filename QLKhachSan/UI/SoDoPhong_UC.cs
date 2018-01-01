@@ -13,11 +13,23 @@ namespace UI
 {
     public partial class SoDoPhong_UC : UserControl
     {
+        
+        public delegate void SendMessage(Panel Message);
+        public SendMessage Sender;
+        private Panel pnContaner;
+        private void GetMessage(Panel Message)
+        {
+            pnContaner = Message;
+        }
         private static SoDoPhong_UC instance;
         private PhongService phongService = PhongService.Instance;
+
+        private ContextMenu contextMenu = new ContextMenu();
         public SoDoPhong_UC()
         {
             InitializeComponent();
+            Sender = new SendMessage(GetMessage);
+            contextMenu.MenuItems.Add("Dọn phòng");
             pnTatCa_Click(pnTatCa, new EventArgs());
         }
 
@@ -40,6 +52,38 @@ namespace UI
             SetClick(sender);
             pnAccent1.Visible = true;
             phongService.HienThiDanhSachPhong(flpPhong);
+            SetClickForRoom();
+        }
+
+        private void SetClickForRoom()
+        {
+            foreach(RoomExpand room in flpPhong.Controls)
+            {
+                room.MouseClick += Room_MouseClick;
+            }
+        }
+
+        private void Room_MouseClick(object sender, MouseEventArgs e)
+        {
+            RoomExpand room = (RoomExpand)sender;
+            if(e.Button == MouseButtons.Left)
+            {
+                /*if (!pnContaner.Controls.ContainsKey("NhanPhong_UC"))
+                {
+                    NhanPhong_UC uc = NhanPhong_UC.Instance;
+                    uc.Dock = DockStyle.Fill;
+                    uc.Sender(pnContaner);
+                    pnContaner.Controls.Add(uc);
+                }
+                pnContaner.Controls["NhanPhong_UC"].BringToFront();*/
+                NhanPhong f = new NhanPhong();
+                f.ShowDialog();
+            }
+            else if(e.Button == MouseButtons.Right)
+            {
+                contextMenu.Show(room, new Point(e.X, e.Y));
+                contextMenu.Tag = room;
+            }
         }
 
         private void pnTrong_Click(object sender, EventArgs e)

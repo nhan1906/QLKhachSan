@@ -48,3 +48,6 @@ E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.SuaPhong.resources
 E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.SoDoPhong_UC.resources
 E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.DatPhong_UC.resources
 E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.ThongBaoDatPhongThanhCong.resources
+E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.ChonPhongDatPhong.resources
+E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.NhanPhong.resources
+E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.NhanPhong_UC.resources

@@ -45,6 +45,12 @@ namespace DAO
             return false;
         }
 
+        public bool HuyDatPhong(string maDatPhong)
+        {
+            string query = "update PhieuDatPhong Set tinhTrang = -1 where maDatPhong = N'" + maDatPhong + "'";
+            return provider.ExecuteNonQuery(query) > 0;
+        }
+
         public PhieuDatPhong LayPhieuDatPhongTheoMa(string maDatPhong)
         {
             string query = "Select * from PhieuDatPhong where maDatPhong = N'" + maDatPhong + "'";

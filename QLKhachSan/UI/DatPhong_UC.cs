@@ -142,6 +142,8 @@ namespace UI
                     cmb.Location = new Point(610, 50 + 90 *index  + 45 - 15);
                     dtgvTinhTrang.Controls.Add(cmb);
                     cmb.Tag = index;
+                    if (cmb.Items.Count == 0)
+                        return;
                     cmb.SelectedIndex = 0;
                     cmb.Click += Cmb_SelectedIndexChanged;
                     cmb.SelectedIndexChanged += Cmb_SelectedIndexChanged;
@@ -227,7 +229,7 @@ namespace UI
         private void btnDatPhong_Click(object sender, EventArgs e)
         {
             SetDefaultErrorProvider();
-            if (ValidatingInfoKhachhang())
+            if (ValidatingInfoKhachhang() && DaChonPhongChua())
             {
 
                 string tenKhachHang = txtName.Text.Trim().ToUpperInvariant();
@@ -255,7 +257,7 @@ namespace UI
                             continue;
                         int indexRow = (int)cmbChonPhong.Tag;
                         string maLoaiPhong = dtgvTinhTrang.Rows[indexRow].Cells[1].Value.ToString();
-                        List<Phong> phongTheoLoai = danhSachPhongConTrongService.DanhSachPhongTheoLoaiPhong(ngayDen, ngayDi, maLoaiPhong);
+                        List<Phong> phongTheoLoai = danhSachPhongConTrongService.DanhSachPhongTheoLoaiPhong(soPhong ,ngayDen, ngayDi, maLoaiPhong);
                         foreach (Phong phong in phongTheoLoai)
                         {
                             chiTietDatPhongService.ThemChiTietDatPhong(phong, maDatPhong);
@@ -264,6 +266,7 @@ namespace UI
 
                     ThongBaoDatPhongThanhCong f = new ThongBaoDatPhongThanhCong(maDatPhong);
                     f.ShowDialog();
+                    LoadTrang();
                 }
 
             }
@@ -291,6 +294,27 @@ namespace UI
             {
                 return false;
             }
+        }
+
+        private bool DaChonPhongChua()
+        {
+            foreach(ComboBox cmb in cmbChonSLList)
+            {
+                if (cmb.SelectedIndex != 0)
+                    return true;
+            }
+            MessageBox.Show("Vui long chon phong truoc khi dat", "Thong bao", MessageBoxButtons.OK);
+            return false;
+        }
+
+        private void LoadTrang()
+        {
+            HienThiView();
+            GenerateId();
+            txtEmail.Text = "";
+            txtName.Text = "";
+            txtSoDienThoai.Text = "";
+            rtxtYeuCauKhac.Text = "";
         }
     }
 }

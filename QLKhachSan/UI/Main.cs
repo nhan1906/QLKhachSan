@@ -71,6 +71,7 @@ namespace UI
             {
                 SoDoPhong_UC uc = SoDoPhong_UC.Instance;
                 uc.Dock = DockStyle.Fill;
+                uc.Sender(pnContainer);
                 pnContainer.Controls.Add(uc);
             }
             pnContainer.Controls["SoDoPhong_UC"].BringToFront();

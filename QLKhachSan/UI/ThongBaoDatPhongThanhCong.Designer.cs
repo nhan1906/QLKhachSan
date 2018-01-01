@@ -37,12 +37,13 @@
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.lbYeuCauKhac = new MetroFramework.Controls.MetroLabel();
             this.lbSoDem = new MetroFramework.Controls.MetroLabel();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.btnDatPhong = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnHuyDatPhong = new System.Windows.Forms.Button();
             this.lbTYeuCauKhac = new MetroFramework.Controls.MetroLabel();
+            this.dtgvDat = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvDat)).BeginInit();
             this.SuspendLayout();
             // 
             // lbNgayDen
@@ -126,15 +127,6 @@
             this.lbSoDem.TabIndex = 3;
             this.lbSoDem.Text = "SỐ ĐÊM";
             // 
-            // listView1
-            // 
-            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listView1.Location = new System.Drawing.Point(102, 200);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(834, 307);
-            this.listView1.TabIndex = 4;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
             // btnDatPhong
             // 
             this.btnDatPhong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(139)))), ((int)(((byte)(202)))));
@@ -177,19 +169,20 @@
             this.button2.Text = "Cập nhập lại";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnHuyDatPhong
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(139)))), ((int)(((byte)(202)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(529, 524);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(111, 29);
-            this.button3.TabIndex = 104;
-            this.button3.Text = "Hủy đặt phòng";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnHuyDatPhong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(139)))), ((int)(((byte)(202)))));
+            this.btnHuyDatPhong.FlatAppearance.BorderSize = 0;
+            this.btnHuyDatPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHuyDatPhong.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuyDatPhong.ForeColor = System.Drawing.Color.White;
+            this.btnHuyDatPhong.Location = new System.Drawing.Point(529, 524);
+            this.btnHuyDatPhong.Name = "btnHuyDatPhong";
+            this.btnHuyDatPhong.Size = new System.Drawing.Size(111, 29);
+            this.btnHuyDatPhong.TabIndex = 104;
+            this.btnHuyDatPhong.Text = "Hủy đặt phòng";
+            this.btnHuyDatPhong.UseVisualStyleBackColor = false;
+            this.btnHuyDatPhong.Click += new System.EventHandler(this.btnHuyDatPhong_Click);
             // 
             // lbTYeuCauKhac
             // 
@@ -199,16 +192,25 @@
             this.lbTYeuCauKhac.TabIndex = 1;
             this.lbTYeuCauKhac.Text = "YÊU CẦU KHÁC";
             // 
+            // dtgvDat
+            // 
+            this.dtgvDat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvDat.Location = new System.Drawing.Point(102, 200);
+            this.dtgvDat.Name = "dtgvDat";
+            this.dtgvDat.RowTemplate.Height = 30;
+            this.dtgvDat.Size = new System.Drawing.Size(850, 301);
+            this.dtgvDat.TabIndex = 105;
+            // 
             // ThongBaoDatPhongThanhCong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(991, 564);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.dtgvDat);
+            this.Controls.Add(this.btnHuyDatPhong);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnDatPhong);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.lbSoDem);
             this.Controls.Add(this.lbNgayDi);
             this.Controls.Add(this.metroLabel7);
@@ -221,6 +223,7 @@
             this.Controls.Add(this.lbNgayDen);
             this.Name = "ThongBaoDatPhongThanhCong";
             this.Text = "Đặt phòng thành công";
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvDat)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,11 +240,11 @@
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private MetroFramework.Controls.MetroLabel lbYeuCauKhac;
         private MetroFramework.Controls.MetroLabel lbSoDem;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button btnDatPhong;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnHuyDatPhong;
         private MetroFramework.Controls.MetroLabel lbTYeuCauKhac;
+        private System.Windows.Forms.DataGridView dtgvDat;
     }
 }

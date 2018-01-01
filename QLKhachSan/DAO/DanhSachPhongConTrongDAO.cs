@@ -28,11 +28,22 @@ namespace DAO
 
         private DataProvider provider = DataProvider.Instance;
 
-        public List<Phong> DanhSachPhongTrongTheoLoai(DateTime checkIn , DateTime checkOut , string maLoaiPhong)
+        public List<Phong> DanhSachPhongTrongTheoLoai(int soPhong , DateTime checkIn , DateTime checkOut , string maLoaiPhong)
         {
             List<Phong> phongTrongs = new List<Phong>();
-            DataTable data = provider.ExecuteQuery("DanhSachPhongConTrong @soPhong , @checkIn , @checkOut , @maLoaiPhong", new object[] {1, checkIn, checkOut, maLoaiPhong });
+            DataTable data = provider.ExecuteQuery("DanhSachPhongConTrong @soPhong , @checkIn , @checkOut , @maLoaiPhong", new object[] {soPhong, checkIn, checkOut, maLoaiPhong });
             foreach(DataRow row in data.Rows)
+            {
+                phongTrongs.Add(new Phong(row));
+            }
+            return phongTrongs;
+        }
+
+        public List<Phong> DanhSachPhongTrongTheoLoai(DateTime checkIn, DateTime checkOut, string maLoaiPhong)
+        {
+            List<Phong> phongTrongs = new List<Phong>();
+            DataTable data = provider.ExecuteQuery("DanhSachPhongConTrongTatCa @checkIn , @checkOut , @maLoaiPhong", new object[] { checkIn, checkOut, maLoaiPhong });
+            foreach (DataRow row in data.Rows)
             {
                 phongTrongs.Add(new Phong(row));
             }

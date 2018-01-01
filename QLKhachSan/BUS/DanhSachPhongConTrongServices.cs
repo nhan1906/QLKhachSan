@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Controls;
 
 namespace BUS
 {
@@ -13,7 +14,7 @@ namespace BUS
     {
         #region Singleton
         private static DanhSachPhongConTrongServices _instance;
-
+        
         public static DanhSachPhongConTrongServices Instance
         {
             get
@@ -27,11 +28,36 @@ namespace BUS
         private DanhSachPhongConTrongServices() { }
         #endregion
 
+        private PhieuDatPhongDAO phieuDatPhongDAO = PhieuDatPhongDAO.Instance;
+        private ChiTietDatPhongDAO chiTietDatPhongDAO = ChiTietDatPhongDAO.Instance;
+
+        public int LaySoPhongDaDatTheoLoai(string maDatPhong, string maLoaiPhong)
+        {
+            return chiTietDatPhongDAO.LaySoPhongDaDat(maDatPhong, maLoaiPhong);
+        }
+
+        public void HienThiDanhSachPhongTheoMaLoai(MetroListView lsvChonPhong, string maDatPhong, string maLoaiPhong)
+        {
+            PhieuDatPhong phieuDatPhong = phieuDatPhongDAO.LayPhieuDatPhongTheoMa(maDatPhong);
+            List<Phong> phongs = data.DanhSachPhongTrongTheoLoai((DateTime)phieuDatPhong.NgayDen , (DateTime)phieuDatPhong.NgayDi , maLoaiPhong);
+            foreach (Phong phong in phongs)
+                lsvChonPhong.Items.Add(phong.MaPhong.ToString());
+            phongs = chiTietDatPhongDAO.DanhSachPhongDaDat(maDatPhong, maLoaiPhong);
+            foreach (Phong phong in phongs)
+            {
+                ListViewItem item = new ListViewItem();
+                item.Checked = true;
+                item.Text = phong.MaPhong.ToString();
+                lsvChonPhong.Items.Add(item);
+            }
+        }
+
+
         private DanhSachPhongConTrongDAO data = DanhSachPhongConTrongDAO.Instance;
 
-        public List<Phong> DanhSachPhongTheoLoaiPhong(DateTime checkIn , DateTime checkOut , string maLoaiPhong)
+        public List<Phong> DanhSachPhongTheoLoaiPhong(int soPhong ,DateTime checkIn , DateTime checkOut , string maLoaiPhong)
         {
-            return data.DanhSachPhongTrongTheoLoai(checkIn , checkOut, maLoaiPhong);
+            return data.DanhSachPhongTrongTheoLoai(soPhong ,checkIn , checkOut, maLoaiPhong);
         }
     }
 }

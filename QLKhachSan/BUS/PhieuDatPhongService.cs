@@ -28,6 +28,7 @@ namespace BUS
         #endregion
 
         private PhieuDatPhongDAO data = PhieuDatPhongDAO.Instance;
+        private ChiTietDatPhongDAO chiTietDatPhongData = ChiTietDatPhongDAO.Instance;
 
         public bool KiemTraDaTonTaiMa(string maDatPhong)
         {
@@ -43,6 +44,11 @@ namespace BUS
         public PhieuDatPhong LayChiTietPhieuDat(string maDatPhong)
         {
             return data.LayPhieuDatPhongTheoMa(maDatPhong);
+        }
+
+        public bool HuyPhieuDatPhong(string maDatPhong)
+        {
+            return data.HuyDatPhong(maDatPhong);
         }
     }
 }

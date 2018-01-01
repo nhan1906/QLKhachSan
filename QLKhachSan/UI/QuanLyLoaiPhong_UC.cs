@@ -16,14 +16,7 @@ namespace UI
     public partial class QuanLyLoaiPhong_UC : UserControl
     {
 
-        private static QuanLyLoaiPhong_UC instance;
-        public delegate void SendMessage(Panel Message);
-        public SendMessage Sender;
-        private Panel pnContaner;
-        private void GetMessage(Panel Message)
-        {
-            pnContaner = Message;
-        }
+        
 
 
         private LoaiPhongService loaiPhongService = LoaiPhongService.Instance;
@@ -32,6 +25,14 @@ namespace UI
         private List<Button> buttonSuas = new List<Button>();
         private List<Button> buttonXoas = new List<Button>();
 
+        private static QuanLyLoaiPhong_UC instance;
+        public delegate void SendMessage(Panel Message);
+        public SendMessage Sender;
+        private Panel pnContaner;
+        private void GetMessage(Panel Message)
+        {
+            pnContaner = Message;
+        }
         public static QuanLyLoaiPhong_UC Instance
         {
             get
