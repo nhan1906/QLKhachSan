@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnBar = new System.Windows.Forms.Panel();
+            this.btnUser = new System.Windows.Forms.Button();
             this.btnPower = new System.Windows.Forms.Button();
             this.flpMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.btnSoDoPhong = new System.Windows.Forms.Button();
@@ -38,15 +39,16 @@
             this.btnQuanLyPhong = new System.Windows.Forms.Button();
             this.btnQuanLyLoaiPhong = new System.Windows.Forms.Button();
             this.btnQuanLyTang = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnQLDichVu = new System.Windows.Forms.Button();
             this.btnDanhMuc = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnQuyDinh = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.btnKhachHang = new System.Windows.Forms.Button();
             this.pnContainer = new System.Windows.Forms.Panel();
+            this.notify = new Tulpep.NotificationWindow.PopupNotifier();
             this.pnBar.SuspendLayout();
             this.flpMenu.SuspendLayout();
             this.flpQuanLy.SuspendLayout();
@@ -56,6 +58,7 @@
             // pnBar
             // 
             this.pnBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.pnBar.Controls.Add(this.btnUser);
             this.pnBar.Controls.Add(this.btnPower);
             this.pnBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnBar.Location = new System.Drawing.Point(0, 0);
@@ -63,15 +66,27 @@
             this.pnBar.Size = new System.Drawing.Size(800, 30);
             this.pnBar.TabIndex = 2;
             // 
+            // btnUser
+            // 
+            this.btnUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUser.FlatAppearance.BorderSize = 0;
+            this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUser.Image = global::UI.Properties.Resources.user;
+            this.btnUser.Location = new System.Drawing.Point(747, 4);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(22, 23);
+            this.btnUser.TabIndex = 4;
+            this.btnUser.UseVisualStyleBackColor = true;
+            // 
             // btnPower
             // 
             this.btnPower.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPower.FlatAppearance.BorderSize = 0;
             this.btnPower.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPower.Image = global::UI.Properties.Resources.power;
-            this.btnPower.Location = new System.Drawing.Point(751, 4);
+            this.btnPower.Location = new System.Drawing.Point(775, 4);
             this.btnPower.Name = "btnPower";
-            this.btnPower.Size = new System.Drawing.Size(46, 23);
+            this.btnPower.Size = new System.Drawing.Size(22, 23);
             this.btnPower.TabIndex = 3;
             this.btnPower.UseVisualStyleBackColor = true;
             this.btnPower.Click += new System.EventHandler(this.btnPower_Click);
@@ -148,7 +163,7 @@
             this.flpQuanLy.Controls.Add(this.btnQuanLyPhong);
             this.flpQuanLy.Controls.Add(this.btnQuanLyLoaiPhong);
             this.flpQuanLy.Controls.Add(this.btnQuanLyTang);
-            this.flpQuanLy.Controls.Add(this.button1);
+            this.flpQuanLy.Controls.Add(this.btnQLDichVu);
             this.flpQuanLy.Dock = System.Windows.Forms.DockStyle.Top;
             this.flpQuanLy.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flpQuanLy.Location = new System.Drawing.Point(3, 114);
@@ -210,22 +225,22 @@
             this.btnQuanLyTang.UseVisualStyleBackColor = true;
             this.btnQuanLyTang.Click += new System.EventHandler(this.btnQuanLyTang_Click);
             // 
-            // button1
+            // btnQLDichVu
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(25, 114);
-            this.button1.Margin = new System.Windows.Forms.Padding(25, 3, 3, 3);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(116, 31);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Dịch vụ";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnQLDichVu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnQLDichVu.FlatAppearance.BorderSize = 0;
+            this.btnQLDichVu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQLDichVu.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLDichVu.Location = new System.Drawing.Point(25, 114);
+            this.btnQLDichVu.Margin = new System.Windows.Forms.Padding(25, 3, 3, 3);
+            this.btnQLDichVu.Name = "btnQLDichVu";
+            this.btnQLDichVu.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnQLDichVu.Size = new System.Drawing.Size(116, 31);
+            this.btnQLDichVu.TabIndex = 22;
+            this.btnQLDichVu.Text = "Dịch vụ";
+            this.btnQLDichVu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQLDichVu.UseVisualStyleBackColor = true;
+            this.btnQLDichVu.Click += new System.EventHandler(this.btnQLDichVu_Click);
             // 
             // btnDanhMuc
             // 
@@ -244,7 +259,7 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.button2);
+            this.flowLayoutPanel1.Controls.Add(this.btnQuyDinh);
             this.flowLayoutPanel1.Controls.Add(this.button3);
             this.flowLayoutPanel1.Controls.Add(this.button4);
             this.flowLayoutPanel1.Controls.Add(this.button5);
@@ -256,23 +271,23 @@
             this.flowLayoutPanel1.TabIndex = 24;
             this.flowLayoutPanel1.Visible = false;
             // 
-            // button2
+            // btnQuyDinh
             // 
-            this.button2.BackColor = System.Drawing.Color.Gray;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(25, 3);
-            this.button2.Margin = new System.Windows.Forms.Padding(25, 3, 3, 3);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(116, 31);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "Phòng";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnQuyDinh.BackColor = System.Drawing.Color.Gray;
+            this.btnQuyDinh.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnQuyDinh.FlatAppearance.BorderSize = 0;
+            this.btnQuyDinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuyDinh.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuyDinh.ForeColor = System.Drawing.Color.White;
+            this.btnQuyDinh.Location = new System.Drawing.Point(25, 3);
+            this.btnQuyDinh.Margin = new System.Windows.Forms.Padding(25, 3, 3, 3);
+            this.btnQuyDinh.Name = "btnQuyDinh";
+            this.btnQuyDinh.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnQuyDinh.Size = new System.Drawing.Size(116, 31);
+            this.btnQuyDinh.TabIndex = 19;
+            this.btnQuyDinh.Text = "Phòng";
+            this.btnQuyDinh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQuyDinh.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
@@ -345,6 +360,17 @@
             this.pnContainer.Size = new System.Drawing.Size(650, 570);
             this.pnContainer.TabIndex = 4;
             // 
+            // notify
+            // 
+            this.notify.ContentFont = new System.Drawing.Font("Tahoma", 8F);
+            this.notify.ContentText = null;
+            this.notify.Image = null;
+            this.notify.IsRightToLeft = false;
+            this.notify.OptionsMenu = null;
+            this.notify.Size = new System.Drawing.Size(400, 100);
+            this.notify.TitleFont = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.notify.TitleText = null;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -379,15 +405,17 @@
         private System.Windows.Forms.Button btnQuanLyPhong;
         private System.Windows.Forms.Button btnQuanLyLoaiPhong;
         private System.Windows.Forms.Button btnQuanLyTang;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnQLDichVu;
         private System.Windows.Forms.Button btnDanhMuc;
         private System.Windows.Forms.Button btnKhachHang;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnQuyDinh;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel pnContainer;
+        private Tulpep.NotificationWindow.PopupNotifier notify;
+        private System.Windows.Forms.Button btnUser;
     }
 }
 

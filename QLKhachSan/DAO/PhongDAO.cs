@@ -52,6 +52,11 @@ namespace DAO
             return list;
         }
 
+        public bool CapNhatDonDepPhong(int i, int maPhong)
+        {
+            return provider.ExecuteNonQuery("update Phong set ban = " + i + " where maPhong = " + maPhong) > 0;
+        }
+
         public int LayPhongTiepTheoCuaTang(int tangThu)
         {
             return (int)provider.ExecuteScalar("SELECT ISNULL(MAX(phongSo), 0) from Phong WHERE tangThu = " + tangThu);
@@ -65,6 +70,24 @@ namespace DAO
                 return true;
             }
             return false;
+        }
+
+        public Phong LayPhongBangMaPhong(int maPhong)
+        {
+            DataTable data = provider.ExecuteQuery("select * from Phong where maPhong = " + maPhong);
+            if (data.Rows.Count > 0)
+                return new Phong(data.Rows[0]);
+            return null;
+        }
+
+        public bool CapNhatTrangThaiPhong(string tenTinhTrangPhong, int maPhong)
+        {
+            return provider.ExecuteNonQuery("update Phong set tenTinhTrangPhong = N'" + tenTinhTrangPhong + "' where maPhong = " + maPhong) > 0;
+        }
+
+        public bool CapNhatMaHDHienTai(string maHD, int maPhong)
+        {
+            return provider.ExecuteNonQuery("update Phong set maHDHienTai = N'" + maHD + "' where maPhong = " + maPhong) > 0;
         }
     }
 }

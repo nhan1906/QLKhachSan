@@ -51,3 +51,11 @@ E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.ThongBaoDatPhongThanhCong.resources
 E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.ChonPhongDatPhong.resources
 E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.NhanPhong.resources
 E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.NhanPhong_UC.resources
+E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.ThemKhachHang.resources
+E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.CapNhatSuaPhong.resources
+E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.DangNhapForm.resources
+E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.DatCocForm.resources
+E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.SplashScreen.resources
+E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.DichVu_UC.resources
+E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.SoLuongDV.resources
+E:\Git\QLKhachSan\QLKhachSan\UI\obj\Debug\UI.ChuyenPhongForm.resources

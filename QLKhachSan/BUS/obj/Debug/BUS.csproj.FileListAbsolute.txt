@@ -26,3 +26,4 @@ E:\Git\QLKhachSan\QLKhachSan\BUS\obj\Debug\BUS.Properties.Resources.resources
 E:\Git\QLKhachSan\QLKhachSan\BUS\obj\Debug\BUS.csproj.GenerateResource.Cache
 E:\Git\QLKhachSan\QLKhachSan\BUS\obj\Debug\BUS.dll
 E:\Git\QLKhachSan\QLKhachSan\BUS\obj\Debug\BUS.pdb
+E:\Git\QLKhachSan\QLKhachSan\BUS\obj\Debug\BUS.RoomExpand.resources

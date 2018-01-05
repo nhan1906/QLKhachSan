@@ -61,5 +61,17 @@ namespace DAO
             }
             return null;
         }
+
+        public bool KiemTraDieuKienDatPhong(int maPhong, DateTime checkIn, DateTime checkOut)
+        {
+            string query = "KiemTraDaCoDatPhongChua @maPhong , @checkIn , @checkOut";
+            return provider.ExecuteQuery(query, new object[] { maPhong, checkIn, checkOut }).Rows.Count > 0;
+        }
+
+        public bool KiemTraPhongCoDuocDatHomNay(int maPhong)
+        {
+            return provider.ExecuteQuery("select * from PhieuDatPhong inner join ChiTietDatPhong on PhieuDatPhong.maDatPhong = ChiTietDatPhong.maDatPhong " +
+                    "where maPhong = " + maPhong + " and convert(date, ngayden) = convert(date, getdate())").Rows.Count > 0;
+        }
     }
 }

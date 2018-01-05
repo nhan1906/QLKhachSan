@@ -316,5 +316,10 @@ namespace UI
             txtSoDienThoai.Text = "";
             rtxtYeuCauKhac.Text = "";
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

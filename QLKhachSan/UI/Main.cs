@@ -23,7 +23,7 @@ namespace UI
             get
             {
                 if (instance == null)
-                    instance = new Main();
+                    instance = new Main(null);
                 return instance;
             }
         }
@@ -43,9 +43,15 @@ namespace UI
             }
         }
 
-        public Main()
+        private NhanVien account;
+
+        public Main(NhanVien account)
         {
             InitializeComponent();
+            instance = this;
+            this.account = account;
+            notify.TitleText = "Chào " + account.LyLich.Ten + "!";
+            notify.Popup();
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             btnSoDoPhong_Click(btnSoDoPhong ,new EventArgs());
             
@@ -69,7 +75,7 @@ namespace UI
             SetClickButton(sender);
             if (!pnContainer.Controls.ContainsKey("SoDoPhong_UC"))
             {
-                SoDoPhong_UC uc = SoDoPhong_UC.Instance;
+                SoDoPhong_UC uc = new SoDoPhong_UC(account);
                 uc.Dock = DockStyle.Fill;
                 uc.Sender(pnContainer);
                 pnContainer.Controls.Add(uc);
@@ -167,9 +173,16 @@ namespace UI
             pnContainer.Controls["QuanLyTang_UC"].BringToFront();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnQLDichVu_Click(object sender, EventArgs e)
         {
             SetClickButtonLevel2(sender);
+            if (!pnContainer.Controls.ContainsKey("DichVu_UC"))
+            {
+                DichVu_UC uc = DichVu_UC.Instance;
+                uc.Dock = DockStyle.Fill;
+                pnContainer.Controls.Add(uc);
+            }
+            pnContainer.Controls["DichVu_UC"].BringToFront();
         }
 
         private void btnDanhMuc_Click(object sender, EventArgs e)

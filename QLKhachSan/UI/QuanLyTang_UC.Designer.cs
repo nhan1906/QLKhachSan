@@ -149,6 +149,7 @@
             this.dtgvTang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvTang.Location = new System.Drawing.Point(0, 0);
             this.dtgvTang.Name = "dtgvTang";
+            this.dtgvTang.RowTemplate.Height = 36;
             this.dtgvTang.Size = new System.Drawing.Size(610, 400);
             this.dtgvTang.TabIndex = 1;
             this.dtgvTang.SelectionChanged += new System.EventHandler(this.dtgvTang_SelectionChanged);

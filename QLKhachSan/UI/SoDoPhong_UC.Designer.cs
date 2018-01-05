@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pnDangSua = new System.Windows.Forms.Panel();
             this.pnAccent8 = new System.Windows.Forms.Panel();
@@ -67,6 +68,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.flpPhong = new System.Windows.Forms.FlowLayoutPanel();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.panel4.SuspendLayout();
             this.pnDangSua.SuspendLayout();
             this.pnBan.SuspendLayout();
@@ -516,6 +518,11 @@
             this.flpPhong.Size = new System.Drawing.Size(1240, 1040);
             this.flpPhong.TabIndex = 11;
             // 
+            // timer
+            // 
+            this.timer.Interval = 30000;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
             // SoDoPhong_UC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -592,5 +599,6 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.FlowLayoutPanel flpPhong;
+        private System.Windows.Forms.Timer timer;
     }
 }

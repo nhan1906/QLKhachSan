@@ -52,6 +52,13 @@ namespace BUS
             }
         }
 
+        public void HienThiDanhSachPhongTheoMaLoai(MetroListView lsvChonPhong, string maLoaiPhong, DateTime checkIn , DateTime checkOut)
+        {
+
+            List<Phong> phongs = data.DanhSachPhongTrongTheoLoai(checkIn, checkOut, maLoaiPhong);
+            foreach (Phong phong in phongs)
+                lsvChonPhong.Items.Add(phong.MaPhong.ToString());
+        }
 
         private DanhSachPhongConTrongDAO data = DanhSachPhongConTrongDAO.Instance;
 

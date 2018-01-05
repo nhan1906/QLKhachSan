@@ -1,4 +1,5 @@
-﻿using DTO;
+﻿using DAO;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -12,8 +13,19 @@ namespace BUS
 {
     public class RoomExpand : Control
     {
-        public RoomExpand()
+
+        private int widthLabel, iconSize;
+        private Rectangle rMain1, rMain2, rLoaiPhong, rSoPhong, rIcon, rNuaTren, rNuaDuoi, rTren, rGiua, rDuoi, rIconClean;
+
+        
+        private Phong phong;
+
+        public RoomExpand(Phong phong)
         {
+            //Dữ liệu phòng 
+            this.Phong = phong;
+
+            //Thông số 
             this.Width = 230;
             this.Height = 70;
             widthLabel = 50;
@@ -28,79 +40,80 @@ namespace BUS
             rTren = new Rectangle(widthLabel, 0, Width - widthLabel, Height / 3);
             rGiua = new Rectangle(widthLabel, Height / 3, Width - widthLabel, Height / 3);
             rDuoi = new Rectangle(widthLabel, 2 * Height / 3, Width - widthLabel, Height / 3);
-            TinhTrang = TinhTrang.Trong;
+            rIconClean = new Rectangle(Width - 15, 5, 10, 10);
+            
             this.Paint += RoomExpand_Paint;
         }
-
-
-        private TinhTrang tinhTrang;
-        private int widthLabel, iconSize;
-        private Rectangle rMain1, rMain2, rLoaiPhong, rSoPhong, rIcon, rNuaTren, rNuaDuoi, rTren, rGiua, rDuoi;
-        private Phong phong;
-
-        public RoomExpand(Phong phong)
-        {
-            
-
-        }
-
-        public TinhTrang TinhTrang
+        
+        public Phong Phong
         {
             get
             {
-                return tinhTrang;
+                return phong;
             }
 
             set
             {
-                tinhTrang = value;
+                phong = value;
             }
         }
-
+        
         private void RoomExpand_Paint(object sender, PaintEventArgs e)
         {
 
-            switch (TinhTrang)
+            if (phong.TenTinhTrangPhong == "Trống")
             {
-                case TinhTrang.Trong:
-                    VeCoBan(0, e);
-                    //Vẽ icon
-                    e.Graphics.DrawImage(Properties.Resources.tick_fff, rIcon);
-                    break;
-                case TinhTrang.NhanPhong:
-                    VeCoBan(1, e);
-                    //Vẽ icon
-                    e.Graphics.DrawImage(Properties.Resources.bed, rIcon);
-                    break;
-                case TinhTrang.QuaHan:
-                    VeCoBan(2, e);
-                    //Vẽ icon
-                    e.Graphics.DrawImage(Properties.Resources.timer, rIcon);
-                    break;
-                case TinhTrang.DaDat:
-                    VeCoBan(3, e);
-                    //Vẽ icon
-                    e.Graphics.DrawImage(Properties.Resources.calendar_check, rIcon);
-                    break;
-                case TinhTrang.KhongDen:
-                    VeCoBan(4, e);
-                    //Vẽ icon
-                    e.Graphics.DrawImage(Properties.Resources.calendar_cancel, rIcon);
-                    break;
-                case TinhTrang.Ban:
-                    VeCoBan(5, e);
-                    //Vẽ icon
-                    e.Graphics.DrawImage(Properties.Resources.timer, rIcon);
-                    break;
-                case TinhTrang.DangSua:
-                    VeCoBan(6, e);
-                    //Vẽ icon
-                    e.Graphics.DrawImage(Properties.Resources.tick_fff, rIcon);
-                    break;
+                VeCoBan(0, e);
+                //Vẽ icon
+                e.Graphics.DrawImage(Properties.Resources.tick_fff, rIcon);
+            }
+            else if (phong.TenTinhTrangPhong == "Đã đặt")
+            {
+                VeCoBan(3, e);
+                //Vẽ icon
+                e.Graphics.DrawImage(Properties.Resources.calendar_check, rIcon);
+            }
+            else if (phong.TenTinhTrangPhong == "Nhận phòng")
+            {
+
+                StringFormat stringFormat = new StringFormat();
+                stringFormat.Alignment = StringAlignment.Center;
+                stringFormat.LineAlignment = StringAlignment.Center;
+                SolidBrush whiteBrush = new SolidBrush(ColorTranslator.FromHtml("#F45644"));
+                VeCoBan(1, e);
+                //Vẽ icon
+                PhieuNhanPhong phieuNhanPhong = PhieuNhanPhongDAO.Instance.LayPhieuNhanPhongTheoMaPhong(phong.MaPhong);
+                KhachHang khachHang = KhachHangDAO.Instance.LayKhachHangBangMaKH(KhachHangOPhongDAO.Instance.LayMaKHThuNhatCuaPhong(phieuNhanPhong.MaNhanPhong));
+                //Vẽ tên phòng
+                e.Graphics.DrawString(phieuNhanPhong.CheckIn.ToShortDateString(), new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Pixel), whiteBrush, rTren, stringFormat);
+                e.Graphics.DrawString(khachHang.TenKhachHang, new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Pixel), whiteBrush, rGiua, stringFormat);
+                e.Graphics.DrawImage(Properties.Resources.bed, rIcon);
+            }
+            else if (phong.TenTinhTrangPhong == "Quá hạn")
+            {
+                VeCoBan(2, e);
+                //Vẽ icon
+                e.Graphics.DrawImage(Properties.Resources.timer, rIcon);
+            }
+            else if (phong.TenTinhTrangPhong == "Không đến")
+            {
+                VeCoBan(4, e);
+                //Vẽ icon
+                e.Graphics.DrawImage(Properties.Resources.calendar_cancel, rIcon);
+            }
+            else if (phong.TenTinhTrangPhong == "Đang sửa")
+            {
+                VeCoBan(6, e);
+                //Vẽ icon
+                e.Graphics.DrawImage(Properties.Resources.tick_fff, rIcon);
             }
 
+            if(phong.Ban == 2)
+            {
+                e.Graphics.DrawImage(Properties.Resources.bed, rIconClean);
+            }
         }
-
+        
         public void VeCoBan(int i, PaintEventArgs e)
         {
             SolidBrush background = new SolidBrush(ColorTranslator.FromHtml(ColorsTinhTrangPhong[i]));
@@ -116,11 +129,11 @@ namespace BUS
 
 
             //Vẽ tên phòng
-            e.Graphics.DrawString("301", new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Pixel), whiteBrush, rSoPhong, stringFormat);
+            e.Graphics.DrawString(phong.MaPhong.ToString(), new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Pixel), whiteBrush, rSoPhong, stringFormat);
 
 
             //Vẽ loại phòng
-            e.Graphics.DrawString("VS11", new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Pixel), whiteBrush, rLoaiPhong, stringFormat);
+            e.Graphics.DrawString(phong.MaLoaiPhong, new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Pixel), whiteBrush, rLoaiPhong, stringFormat);
 
         }
     }

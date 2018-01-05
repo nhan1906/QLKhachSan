@@ -50,5 +50,10 @@ namespace BUS
         {
             return data.HuyDatPhong(maDatPhong);
         }
+
+        public bool PhongKhongTheDat(int maPhong , DateTime checkIn, DateTime checkOut)
+        {
+            return data.KiemTraDieuKienDatPhong(maPhong, checkIn, checkOut);
+        }
     }
 }

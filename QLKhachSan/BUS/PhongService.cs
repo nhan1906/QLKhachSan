@@ -29,7 +29,7 @@ namespace BUS
         #endregion
 
         private PhongDAO data = PhongDAO.Instance;
-
+        private PhieuDatPhongDAO phieuDatPhongDAO = PhieuDatPhongDAO.Instance;
 
         public void HienThiDanhSachPhong(FlowLayoutPanel flp)
         {
@@ -37,7 +37,7 @@ namespace BUS
             flp.Controls.Clear();
             foreach(Phong phong in phongs)
             {
-                RoomExpand room = new RoomExpand();
+                RoomExpand room = new RoomExpand(phong);
                 flp.Controls.Add(room);
             }
         }
@@ -45,6 +45,11 @@ namespace BUS
         public bool ThemPhong(Phong phong)
         {
             return data.ThemPhong(phong);
+        }
+
+        public void DonDepPhong(int i , int maPhong)
+        {
+            data.CapNhatDonDepPhong(i, maPhong);
         }
 
         public void ThayDoiMaPhong(Label lbMaPhong, ComboBox cmbTang)
@@ -79,8 +84,26 @@ namespace BUS
             flp.Controls.Clear();
             foreach (Phong phong in phongs)
             {
-                RoomExpand room = new RoomExpand();
+                RoomExpand room = new RoomExpand(phong);
                 flp.Controls.Add(room);
+            }
+        }
+
+        public Phong LayPhongBangMaPhong(int maPhong)
+        {
+            return data.LayPhongBangMaPhong(maPhong);
+        }
+
+        public void CapNhatPhongDaDat()
+        {
+            List<Phong> phongs = data.LayDanhSachTatCaPhong();
+            foreach(Phong phong in phongs)
+            {
+                //Kiểm tra xem có phòng nào đặt phòng ngày hôm nay không nếu có thì chuyển sang đặt phòng
+                if (phieuDatPhongDAO.KiemTraPhongCoDuocDatHomNay(phong.MaPhong))
+                {
+                    data.CapNhatTrangThaiPhong("Đã đặt", phong.MaPhong);
+                }
             }
         }
     }

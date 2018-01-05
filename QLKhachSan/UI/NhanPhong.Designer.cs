@@ -30,37 +30,23 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NhanPhong));
             this.lbMaPhong = new MetroFramework.Controls.MetroLabel();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.metroTextBox6 = new MetroFramework.Controls.MetroTextBox();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.metroTextBox7 = new MetroFramework.Controls.MetroTextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.nmTreEm = new System.Windows.Forms.NumericUpDown();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.metroTextBox8 = new MetroFramework.Controls.MetroTextBox();
+            this.nmSoNguoi = new System.Windows.Forms.NumericUpDown();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.metroTextBox9 = new MetroFramework.Controls.MetroTextBox();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.metroTextBox10 = new MetroFramework.Controls.MetroTextBox();
             this.panel17 = new System.Windows.Forms.Panel();
-            this.metroTextBox11 = new MetroFramework.Controls.MetroTextBox();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -68,25 +54,32 @@
             this.panel21 = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
             this.panel23 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
+            this.btnCheck = new System.Windows.Forms.Button();
+            this.cmbLoaiPhong = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.metroDateTime3 = new MetroFramework.Controls.MetroDateTime();
-            this.metroDateTime4 = new MetroFramework.Controls.MetroDateTime();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.checkOut = new MetroFramework.Controls.MetroDateTime();
+            this.btnNhanPhong = new System.Windows.Forms.Button();
+            this.btnHuy = new System.Windows.Forms.Button();
+            this.btnKhachHang = new System.Windows.Forms.Button();
+            this.lsvKhachHang = new MetroFramework.Controls.MetroListView();
+            this.maKH = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tenKH = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.CMND = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.sdt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.diaChi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.txtDatCoc = new MetroFramework.Controls.MetroTextBox();
+            this.txtTongTien = new MetroFramework.Controls.MetroTextBox();
+            this.txtGia = new MetroFramework.Controls.MetroTextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.notify = new Tulpep.NotificationWindow.PopupNotifier();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            this.panel8.SuspendLayout();
-            this.panel12.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmTreEm)).BeginInit();
             this.panel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmSoNguoi)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
             this.panel15.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel17.SuspendLayout();
@@ -97,7 +90,6 @@
             this.panel21.SuspendLayout();
             this.panel22.SuspendLayout();
             this.panel23.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // lbMaPhong
@@ -105,30 +97,15 @@
             this.lbMaPhong.AutoSize = true;
             this.lbMaPhong.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lbMaPhong.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.lbMaPhong.Location = new System.Drawing.Point(169, 20);
+            this.lbMaPhong.Location = new System.Drawing.Point(171, 23);
             this.lbMaPhong.Name = "lbMaPhong";
-            this.lbMaPhong.Size = new System.Drawing.Size(118, 25);
+            this.lbMaPhong.Size = new System.Drawing.Size(42, 25);
             this.lbMaPhong.TabIndex = 18;
-            this.lbMaPhong.Text = "301 Available";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(3, 30);
-            this.label6.Name = "label6";
-            this.label6.Padding = new System.Windows.Forms.Padding(10, 6, 10, 7);
-            this.label6.Size = new System.Drawing.Size(125, 30);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "CMND/Passport";
+            this.lbMaPhong.Text = "301";
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.numericUpDown3);
-            this.panel7.Controls.Add(this.numericUpDown4);
-            this.panel7.Controls.Add(this.panel8);
-            this.panel7.Controls.Add(this.panel12);
+            this.panel7.Controls.Add(this.panel1);
             this.panel7.Controls.Add(this.panel13);
             this.panel7.Controls.Add(this.flowLayoutPanel2);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -137,151 +114,42 @@
             this.panel7.Size = new System.Drawing.Size(370, 149);
             this.panel7.TabIndex = 2;
             // 
-            // numericUpDown3
+            // panel1
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(144, 123);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(145, 20);
-            this.numericUpDown3.TabIndex = 111;
+            this.panel1.Controls.Add(this.nmTreEm);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(138, 30);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(232, 30);
+            this.panel1.TabIndex = 112;
             // 
-            // numericUpDown4
+            // nmTreEm
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(144, 96);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(145, 20);
-            this.numericUpDown4.TabIndex = 28;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.metroTextBox6);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(138, 60);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(232, 30);
-            this.panel8.TabIndex = 110;
-            // 
-            // metroTextBox6
-            // 
-            // 
-            // 
-            // 
-            this.metroTextBox6.CustomButton.Image = null;
-            this.metroTextBox6.CustomButton.Location = new System.Drawing.Point(204, 2);
-            this.metroTextBox6.CustomButton.Name = "";
-            this.metroTextBox6.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.metroTextBox6.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox6.CustomButton.TabIndex = 1;
-            this.metroTextBox6.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox6.CustomButton.UseSelectable = true;
-            this.metroTextBox6.CustomButton.Visible = false;
-            this.metroTextBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTextBox6.Lines = new string[0];
-            this.metroTextBox6.Location = new System.Drawing.Point(0, 0);
-            this.metroTextBox6.MaxLength = 32767;
-            this.metroTextBox6.Name = "metroTextBox6";
-            this.metroTextBox6.PasswordChar = '\0';
-            this.metroTextBox6.PromptText = "Địa chỉ";
-            this.metroTextBox6.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox6.SelectedText = "";
-            this.metroTextBox6.SelectionLength = 0;
-            this.metroTextBox6.SelectionStart = 0;
-            this.metroTextBox6.ShortcutsEnabled = true;
-            this.metroTextBox6.Size = new System.Drawing.Size(232, 30);
-            this.metroTextBox6.TabIndex = 30;
-            this.metroTextBox6.UseSelectable = true;
-            this.metroTextBox6.WaterMark = "Địa chỉ";
-            this.metroTextBox6.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox6.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.metroTextBox7);
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel12.Location = new System.Drawing.Point(138, 30);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(232, 30);
-            this.panel12.TabIndex = 109;
-            // 
-            // metroTextBox7
-            // 
-            // 
-            // 
-            // 
-            this.metroTextBox7.CustomButton.Image = null;
-            this.metroTextBox7.CustomButton.Location = new System.Drawing.Point(204, 2);
-            this.metroTextBox7.CustomButton.Name = "";
-            this.metroTextBox7.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.metroTextBox7.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox7.CustomButton.TabIndex = 1;
-            this.metroTextBox7.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox7.CustomButton.UseSelectable = true;
-            this.metroTextBox7.CustomButton.Visible = false;
-            this.metroTextBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTextBox7.Lines = new string[0];
-            this.metroTextBox7.Location = new System.Drawing.Point(0, 0);
-            this.metroTextBox7.MaxLength = 32767;
-            this.metroTextBox7.Name = "metroTextBox7";
-            this.metroTextBox7.PasswordChar = '\0';
-            this.metroTextBox7.PromptText = "CMND/Passport";
-            this.metroTextBox7.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox7.SelectedText = "";
-            this.metroTextBox7.SelectionLength = 0;
-            this.metroTextBox7.SelectionStart = 0;
-            this.metroTextBox7.ShortcutsEnabled = true;
-            this.metroTextBox7.Size = new System.Drawing.Size(232, 30);
-            this.metroTextBox7.TabIndex = 25;
-            this.metroTextBox7.UseSelectable = true;
-            this.metroTextBox7.WaterMark = "CMND/Passport";
-            this.metroTextBox7.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox7.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.nmTreEm.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.nmTreEm.Location = new System.Drawing.Point(0, 10);
+            this.nmTreEm.Name = "nmTreEm";
+            this.nmTreEm.Size = new System.Drawing.Size(232, 20);
+            this.nmTreEm.TabIndex = 111;
             // 
             // panel13
             // 
-            this.panel13.Controls.Add(this.metroTextBox8);
+            this.panel13.Controls.Add(this.nmSoNguoi);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel13.Location = new System.Drawing.Point(138, 0);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(232, 30);
             this.panel13.TabIndex = 108;
             // 
-            // metroTextBox8
+            // nmSoNguoi
             // 
-            // 
-            // 
-            // 
-            this.metroTextBox8.CustomButton.Image = null;
-            this.metroTextBox8.CustomButton.Location = new System.Drawing.Point(204, 2);
-            this.metroTextBox8.CustomButton.Name = "";
-            this.metroTextBox8.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.metroTextBox8.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox8.CustomButton.TabIndex = 1;
-            this.metroTextBox8.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox8.CustomButton.UseSelectable = true;
-            this.metroTextBox8.CustomButton.Visible = false;
-            this.metroTextBox8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTextBox8.Lines = new string[0];
-            this.metroTextBox8.Location = new System.Drawing.Point(0, 0);
-            this.metroTextBox8.MaxLength = 32767;
-            this.metroTextBox8.Name = "metroTextBox8";
-            this.metroTextBox8.PasswordChar = '\0';
-            this.metroTextBox8.PromptText = "Tên khách hàng";
-            this.metroTextBox8.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox8.SelectedText = "";
-            this.metroTextBox8.SelectionLength = 0;
-            this.metroTextBox8.SelectionStart = 0;
-            this.metroTextBox8.ShortcutsEnabled = true;
-            this.metroTextBox8.Size = new System.Drawing.Size(232, 30);
-            this.metroTextBox8.TabIndex = 24;
-            this.metroTextBox8.UseSelectable = true;
-            this.metroTextBox8.WaterMark = "Tên khách hàng";
-            this.metroTextBox8.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox8.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.nmSoNguoi.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.nmSoNguoi.Location = new System.Drawing.Point(0, 10);
+            this.nmSoNguoi.Name = "nmSoNguoi";
+            this.nmSoNguoi.Size = new System.Drawing.Size(232, 20);
+            this.nmSoNguoi.TabIndex = 28;
             // 
             // flowLayoutPanel2
             // 
-            this.flowLayoutPanel2.Controls.Add(this.label7);
-            this.flowLayoutPanel2.Controls.Add(this.label6);
-            this.flowLayoutPanel2.Controls.Add(this.label8);
             this.flowLayoutPanel2.Controls.Add(this.label9);
             this.flowLayoutPanel2.Controls.Add(this.label10);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -290,36 +158,12 @@
             this.flowLayoutPanel2.Size = new System.Drawing.Size(138, 149);
             this.flowLayoutPanel2.TabIndex = 106;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(3, 0);
-            this.label7.Name = "label7";
-            this.label7.Padding = new System.Windows.Forms.Padding(10, 6, 10, 7);
-            this.label7.Size = new System.Drawing.Size(100, 30);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Khách hàng";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(3, 60);
-            this.label8.Name = "label8";
-            this.label8.Padding = new System.Windows.Forms.Padding(10, 6, 10, 7);
-            this.label8.Size = new System.Drawing.Size(68, 30);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Địa chỉ";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(3, 90);
+            this.label9.Location = new System.Drawing.Point(3, 0);
             this.label9.Name = "label9";
             this.label9.Padding = new System.Windows.Forms.Padding(10, 6, 10, 7);
             this.label9.Size = new System.Drawing.Size(94, 30);
@@ -331,7 +175,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(3, 120);
+            this.label10.Location = new System.Drawing.Point(3, 30);
             this.label10.Name = "label10";
             this.label10.Padding = new System.Windows.Forms.Padding(10, 6, 10, 0);
             this.label10.Size = new System.Drawing.Size(87, 23);
@@ -350,8 +194,6 @@
             // 
             // panel14
             // 
-            this.panel14.Controls.Add(this.numericUpDown5);
-            this.panel14.Controls.Add(this.numericUpDown6);
             this.panel14.Controls.Add(this.panel15);
             this.panel14.Controls.Add(this.panel16);
             this.panel14.Controls.Add(this.panel17);
@@ -362,156 +204,38 @@
             this.panel14.Size = new System.Drawing.Size(370, 149);
             this.panel14.TabIndex = 4;
             // 
-            // numericUpDown5
-            // 
-            this.numericUpDown5.Location = new System.Drawing.Point(144, 123);
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(145, 20);
-            this.numericUpDown5.TabIndex = 111;
-            // 
-            // numericUpDown6
-            // 
-            this.numericUpDown6.Location = new System.Drawing.Point(144, 96);
-            this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Size = new System.Drawing.Size(145, 20);
-            this.numericUpDown6.TabIndex = 28;
-            // 
             // panel15
             // 
-            this.panel15.Controls.Add(this.metroTextBox9);
+            this.panel15.Controls.Add(this.txtDatCoc);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel15.Location = new System.Drawing.Point(138, 60);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(232, 30);
             this.panel15.TabIndex = 110;
             // 
-            // metroTextBox9
-            // 
-            // 
-            // 
-            // 
-            this.metroTextBox9.CustomButton.Image = null;
-            this.metroTextBox9.CustomButton.Location = new System.Drawing.Point(204, 2);
-            this.metroTextBox9.CustomButton.Name = "";
-            this.metroTextBox9.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.metroTextBox9.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox9.CustomButton.TabIndex = 1;
-            this.metroTextBox9.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox9.CustomButton.UseSelectable = true;
-            this.metroTextBox9.CustomButton.Visible = false;
-            this.metroTextBox9.DisplayIcon = true;
-            this.metroTextBox9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTextBox9.Icon = ((System.Drawing.Image)(resources.GetObject("metroTextBox9.Icon")));
-            this.metroTextBox9.IconRight = true;
-            this.metroTextBox9.Lines = new string[0];
-            this.metroTextBox9.Location = new System.Drawing.Point(0, 0);
-            this.metroTextBox9.MaxLength = 32767;
-            this.metroTextBox9.Name = "metroTextBox9";
-            this.metroTextBox9.PasswordChar = '\0';
-            this.metroTextBox9.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox9.SelectedText = "";
-            this.metroTextBox9.SelectionLength = 0;
-            this.metroTextBox9.SelectionStart = 0;
-            this.metroTextBox9.ShortcutsEnabled = true;
-            this.metroTextBox9.Size = new System.Drawing.Size(232, 30);
-            this.metroTextBox9.TabIndex = 30;
-            this.metroTextBox9.UseSelectable = true;
-            this.metroTextBox9.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox9.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // panel16
             // 
-            this.panel16.Controls.Add(this.metroTextBox10);
+            this.panel16.Controls.Add(this.txtTongTien);
             this.panel16.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel16.Location = new System.Drawing.Point(138, 30);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(232, 30);
             this.panel16.TabIndex = 109;
             // 
-            // metroTextBox10
-            // 
-            // 
-            // 
-            // 
-            this.metroTextBox10.CustomButton.Image = null;
-            this.metroTextBox10.CustomButton.Location = new System.Drawing.Point(204, 2);
-            this.metroTextBox10.CustomButton.Name = "";
-            this.metroTextBox10.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.metroTextBox10.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox10.CustomButton.TabIndex = 1;
-            this.metroTextBox10.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox10.CustomButton.UseSelectable = true;
-            this.metroTextBox10.CustomButton.Visible = false;
-            this.metroTextBox10.DisplayIcon = true;
-            this.metroTextBox10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTextBox10.Icon = ((System.Drawing.Image)(resources.GetObject("metroTextBox10.Icon")));
-            this.metroTextBox10.IconRight = true;
-            this.metroTextBox10.Lines = new string[0];
-            this.metroTextBox10.Location = new System.Drawing.Point(0, 0);
-            this.metroTextBox10.MaxLength = 32767;
-            this.metroTextBox10.Name = "metroTextBox10";
-            this.metroTextBox10.PasswordChar = '\0';
-            this.metroTextBox10.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox10.SelectedText = "";
-            this.metroTextBox10.SelectionLength = 0;
-            this.metroTextBox10.SelectionStart = 0;
-            this.metroTextBox10.ShortcutsEnabled = true;
-            this.metroTextBox10.Size = new System.Drawing.Size(232, 30);
-            this.metroTextBox10.TabIndex = 25;
-            this.metroTextBox10.UseSelectable = true;
-            this.metroTextBox10.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox10.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // panel17
             // 
-            this.panel17.Controls.Add(this.metroTextBox11);
+            this.panel17.Controls.Add(this.txtGia);
             this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel17.Location = new System.Drawing.Point(138, 0);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(232, 30);
             this.panel17.TabIndex = 108;
             // 
-            // metroTextBox11
-            // 
-            // 
-            // 
-            // 
-            this.metroTextBox11.CustomButton.Image = null;
-            this.metroTextBox11.CustomButton.Location = new System.Drawing.Point(204, 2);
-            this.metroTextBox11.CustomButton.Name = "";
-            this.metroTextBox11.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.metroTextBox11.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox11.CustomButton.TabIndex = 1;
-            this.metroTextBox11.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox11.CustomButton.UseSelectable = true;
-            this.metroTextBox11.CustomButton.Visible = false;
-            this.metroTextBox11.DisplayIcon = true;
-            this.metroTextBox11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTextBox11.Icon = ((System.Drawing.Image)(resources.GetObject("metroTextBox11.Icon")));
-            this.metroTextBox11.IconRight = true;
-            this.metroTextBox11.Lines = new string[0];
-            this.metroTextBox11.Location = new System.Drawing.Point(0, 0);
-            this.metroTextBox11.MaxLength = 32767;
-            this.metroTextBox11.Name = "metroTextBox11";
-            this.metroTextBox11.PasswordChar = '\0';
-            this.metroTextBox11.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox11.SelectedText = "";
-            this.metroTextBox11.SelectionLength = 0;
-            this.metroTextBox11.SelectionStart = 0;
-            this.metroTextBox11.ShortcutsEnabled = true;
-            this.metroTextBox11.Size = new System.Drawing.Size(232, 30);
-            this.metroTextBox11.TabIndex = 24;
-            this.metroTextBox11.UseSelectable = true;
-            this.metroTextBox11.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox11.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.Controls.Add(this.label11);
             this.flowLayoutPanel3.Controls.Add(this.label12);
             this.flowLayoutPanel3.Controls.Add(this.label13);
-            this.flowLayoutPanel3.Controls.Add(this.label14);
-            this.flowLayoutPanel3.Controls.Add(this.label15);
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
@@ -553,30 +277,6 @@
             this.label13.Size = new System.Drawing.Size(73, 30);
             this.label13.TabIndex = 4;
             this.label13.Text = "Đặt cọc";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(3, 90);
-            this.label14.Name = "label14";
-            this.label14.Padding = new System.Windows.Forms.Padding(10, 6, 10, 7);
-            this.label14.Size = new System.Drawing.Size(94, 30);
-            this.label14.TabIndex = 30;
-            this.label14.Text = "Số người   ";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(3, 120);
-            this.label15.Name = "label15";
-            this.label15.Padding = new System.Windows.Forms.Padding(10, 6, 10, 0);
-            this.label15.Size = new System.Drawing.Size(87, 23);
-            this.label15.TabIndex = 31;
-            this.label15.Text = "Số trẻ em";
             // 
             // panel18
             // 
@@ -643,64 +343,45 @@
             // panel23
             // 
             this.panel23.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel23.Controls.Add(this.button2);
-            this.panel23.Controls.Add(this.button3);
-            this.panel23.Controls.Add(this.metroComboBox2);
+            this.panel23.Controls.Add(this.btnCheck);
+            this.panel23.Controls.Add(this.btnSearch);
+            this.panel23.Controls.Add(this.cmbLoaiPhong);
             this.panel23.Controls.Add(this.metroLabel5);
-            this.panel23.Controls.Add(this.metroLabel6);
             this.panel23.Controls.Add(this.metroLabel7);
-            this.panel23.Controls.Add(this.metroDateTime3);
-            this.panel23.Controls.Add(this.metroDateTime4);
+            this.panel23.Controls.Add(this.checkOut);
             this.panel23.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel23.Location = new System.Drawing.Point(0, 0);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(253, 180);
             this.panel23.TabIndex = 0;
             // 
-            // button2
+            // btnCheck
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(15, 143);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(61, 28);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "Check";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnCheck.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCheck.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnCheck.FlatAppearance.BorderSize = 0;
+            this.btnCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheck.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheck.ForeColor = System.Drawing.Color.White;
+            this.btnCheck.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCheck.Location = new System.Drawing.Point(15, 143);
+            this.btnCheck.Name = "btnCheck";
+            this.btnCheck.Size = new System.Drawing.Size(61, 28);
+            this.btnCheck.TabIndex = 21;
+            this.btnCheck.Text = "Check";
+            this.btnCheck.UseVisualStyleBackColor = false;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
             // 
-            // button3
+            // cmbLoaiPhong
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::UI.Properties.Resources.search_fff;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(82, 143);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(158, 28);
-            this.button3.TabIndex = 20;
-            this.button3.Text = "Tìm phòng tương tự";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // metroComboBox2
-            // 
-            this.metroComboBox2.FormattingEnabled = true;
-            this.metroComboBox2.ItemHeight = 23;
-            this.metroComboBox2.Location = new System.Drawing.Point(96, 16);
-            this.metroComboBox2.Name = "metroComboBox2";
-            this.metroComboBox2.Size = new System.Drawing.Size(144, 29);
-            this.metroComboBox2.TabIndex = 1;
-            this.metroComboBox2.UseCustomBackColor = true;
-            this.metroComboBox2.UseSelectable = true;
+            this.cmbLoaiPhong.FormattingEnabled = true;
+            this.cmbLoaiPhong.ItemHeight = 23;
+            this.cmbLoaiPhong.Location = new System.Drawing.Point(96, 16);
+            this.cmbLoaiPhong.Name = "cmbLoaiPhong";
+            this.cmbLoaiPhong.Size = new System.Drawing.Size(144, 29);
+            this.cmbLoaiPhong.TabIndex = 1;
+            this.cmbLoaiPhong.UseCustomBackColor = true;
+            this.cmbLoaiPhong.UseSelectable = true;
             // 
             // metroLabel5
             // 
@@ -712,75 +393,283 @@
             this.metroLabel5.Text = "Loại phòng:";
             this.metroLabel5.UseCustomBackColor = true;
             // 
-            // metroLabel6
-            // 
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(15, 67);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(69, 19);
-            this.metroLabel6.TabIndex = 1;
-            this.metroLabel6.Text = "Ngày đến:";
-            this.metroLabel6.UseCustomBackColor = true;
-            // 
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(135, 67);
+            this.metroLabel7.Location = new System.Drawing.Point(15, 58);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(58, 19);
             this.metroLabel7.TabIndex = 1;
             this.metroLabel7.Text = "Ngày đi:";
             this.metroLabel7.UseCustomBackColor = true;
             // 
-            // metroDateTime3
+            // checkOut
             // 
-            this.metroDateTime3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.metroDateTime3.Location = new System.Drawing.Point(15, 89);
-            this.metroDateTime3.MinimumSize = new System.Drawing.Size(0, 29);
-            this.metroDateTime3.Name = "metroDateTime3";
-            this.metroDateTime3.Size = new System.Drawing.Size(104, 29);
-            this.metroDateTime3.TabIndex = 19;
-            this.metroDateTime3.UseCustomBackColor = true;
+            this.checkOut.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.checkOut.Location = new System.Drawing.Point(15, 89);
+            this.checkOut.MinimumSize = new System.Drawing.Size(0, 29);
+            this.checkOut.Name = "checkOut";
+            this.checkOut.Size = new System.Drawing.Size(225, 29);
+            this.checkOut.TabIndex = 19;
+            this.checkOut.UseCustomBackColor = true;
             // 
-            // metroDateTime4
+            // btnNhanPhong
             // 
-            this.metroDateTime4.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.metroDateTime4.Location = new System.Drawing.Point(135, 89);
-            this.metroDateTime4.MinimumSize = new System.Drawing.Size(0, 29);
-            this.metroDateTime4.Name = "metroDateTime4";
-            this.metroDateTime4.Size = new System.Drawing.Size(105, 29);
-            this.metroDateTime4.TabIndex = 19;
-            this.metroDateTime4.UseCustomBackColor = true;
+            this.btnNhanPhong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNhanPhong.BackColor = System.Drawing.Color.Black;
+            this.btnNhanPhong.FlatAppearance.BorderSize = 0;
+            this.btnNhanPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNhanPhong.ForeColor = System.Drawing.Color.White;
+            this.btnNhanPhong.Location = new System.Drawing.Point(909, 411);
+            this.btnNhanPhong.Name = "btnNhanPhong";
+            this.btnNhanPhong.Size = new System.Drawing.Size(96, 36);
+            this.btnNhanPhong.TabIndex = 32;
+            this.btnNhanPhong.Text = "Nhận phòng";
+            this.btnNhanPhong.UseVisualStyleBackColor = false;
+            this.btnNhanPhong.Click += new System.EventHandler(this.btnNhanPhong_Click);
             // 
-            // dataGridView2
+            // btnHuy
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(20, 261);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(1002, 58);
-            this.dataGridView2.TabIndex = 29;
+            this.btnHuy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHuy.BackColor = System.Drawing.Color.Black;
+            this.btnHuy.FlatAppearance.BorderSize = 0;
+            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHuy.ForeColor = System.Drawing.Color.White;
+            this.btnHuy.Location = new System.Drawing.Point(796, 411);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(96, 36);
+            this.btnHuy.TabIndex = 31;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.UseVisualStyleBackColor = false;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // btnKhachHang
+            // 
+            this.btnKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnKhachHang.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnKhachHang.FlatAppearance.BorderSize = 0;
+            this.btnKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKhachHang.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKhachHang.ForeColor = System.Drawing.Color.White;
+            this.btnKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKhachHang.Location = new System.Drawing.Point(20, 257);
+            this.btnKhachHang.Name = "btnKhachHang";
+            this.btnKhachHang.Size = new System.Drawing.Size(158, 28);
+            this.btnKhachHang.TabIndex = 33;
+            this.btnKhachHang.Text = "Thêm khách hàng";
+            this.btnKhachHang.UseVisualStyleBackColor = false;
+            this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
+            // 
+            // lsvKhachHang
+            // 
+            this.lsvKhachHang.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.maKH,
+            this.tenKH,
+            this.CMND,
+            this.sdt,
+            this.diaChi});
+            this.lsvKhachHang.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lsvKhachHang.FullRowSelect = true;
+            this.lsvKhachHang.Location = new System.Drawing.Point(18, 302);
+            this.lsvKhachHang.Name = "lsvKhachHang";
+            this.lsvKhachHang.OwnerDraw = true;
+            this.lsvKhachHang.Size = new System.Drawing.Size(1004, 97);
+            this.lsvKhachHang.TabIndex = 35;
+            this.lsvKhachHang.UseCompatibleStateImageBehavior = false;
+            this.lsvKhachHang.UseSelectable = true;
+            this.lsvKhachHang.View = System.Windows.Forms.View.Details;
+            // 
+            // maKH
+            // 
+            this.maKH.Text = "Ma KH";
+            this.maKH.Width = 135;
+            // 
+            // tenKH
+            // 
+            this.tenKH.Text = "Ten KH";
+            this.tenKH.Width = 224;
+            // 
+            // CMND
+            // 
+            this.CMND.Text = "cmnd";
+            this.CMND.Width = 165;
+            // 
+            // sdt
+            // 
+            this.sdt.Text = "So dien thoai";
+            this.sdt.Width = 263;
+            // 
+            // diaChi
+            // 
+            this.diaChi.Text = "Dia chi";
+            this.diaChi.Width = 209;
+            // 
+            // txtDatCoc
+            // 
+            // 
+            // 
+            // 
+            this.txtDatCoc.CustomButton.Image = null;
+            this.txtDatCoc.CustomButton.Location = new System.Drawing.Point(204, 2);
+            this.txtDatCoc.CustomButton.Name = "";
+            this.txtDatCoc.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.txtDatCoc.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtDatCoc.CustomButton.TabIndex = 1;
+            this.txtDatCoc.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtDatCoc.CustomButton.UseSelectable = true;
+            this.txtDatCoc.CustomButton.Visible = false;
+            this.txtDatCoc.DisplayIcon = true;
+            this.txtDatCoc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtDatCoc.Icon = ((System.Drawing.Image)(resources.GetObject("txtDatCoc.Icon")));
+            this.txtDatCoc.IconRight = true;
+            this.txtDatCoc.Lines = new string[] {
+        "0"};
+            this.txtDatCoc.Location = new System.Drawing.Point(0, 0);
+            this.txtDatCoc.MaxLength = 32767;
+            this.txtDatCoc.Name = "txtDatCoc";
+            this.txtDatCoc.PasswordChar = '\0';
+            this.txtDatCoc.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtDatCoc.SelectedText = "";
+            this.txtDatCoc.SelectionLength = 0;
+            this.txtDatCoc.SelectionStart = 0;
+            this.txtDatCoc.ShortcutsEnabled = true;
+            this.txtDatCoc.Size = new System.Drawing.Size(232, 30);
+            this.txtDatCoc.TabIndex = 30;
+            this.txtDatCoc.Text = "0";
+            this.txtDatCoc.UseSelectable = true;
+            this.txtDatCoc.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtDatCoc.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtDatCoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ChiNhapSo);
+            // 
+            // txtTongTien
+            // 
+            // 
+            // 
+            // 
+            this.txtTongTien.CustomButton.Image = null;
+            this.txtTongTien.CustomButton.Location = new System.Drawing.Point(204, 2);
+            this.txtTongTien.CustomButton.Name = "";
+            this.txtTongTien.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.txtTongTien.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtTongTien.CustomButton.TabIndex = 1;
+            this.txtTongTien.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtTongTien.CustomButton.UseSelectable = true;
+            this.txtTongTien.CustomButton.Visible = false;
+            this.txtTongTien.DisplayIcon = true;
+            this.txtTongTien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtTongTien.Icon = ((System.Drawing.Image)(resources.GetObject("txtTongTien.Icon")));
+            this.txtTongTien.IconRight = true;
+            this.txtTongTien.Lines = new string[0];
+            this.txtTongTien.Location = new System.Drawing.Point(0, 0);
+            this.txtTongTien.MaxLength = 32767;
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.PasswordChar = '\0';
+            this.txtTongTien.ReadOnly = true;
+            this.txtTongTien.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtTongTien.SelectedText = "";
+            this.txtTongTien.SelectionLength = 0;
+            this.txtTongTien.SelectionStart = 0;
+            this.txtTongTien.ShortcutsEnabled = true;
+            this.txtTongTien.Size = new System.Drawing.Size(232, 30);
+            this.txtTongTien.TabIndex = 25;
+            this.txtTongTien.UseSelectable = true;
+            this.txtTongTien.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtTongTien.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // txtGia
+            // 
+            // 
+            // 
+            // 
+            this.txtGia.CustomButton.Image = null;
+            this.txtGia.CustomButton.Location = new System.Drawing.Point(204, 2);
+            this.txtGia.CustomButton.Name = "";
+            this.txtGia.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.txtGia.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtGia.CustomButton.TabIndex = 1;
+            this.txtGia.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtGia.CustomButton.UseSelectable = true;
+            this.txtGia.CustomButton.Visible = false;
+            this.txtGia.DisplayIcon = true;
+            this.txtGia.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtGia.Icon = ((System.Drawing.Image)(resources.GetObject("txtGia.Icon")));
+            this.txtGia.IconRight = true;
+            this.txtGia.Lines = new string[0];
+            this.txtGia.Location = new System.Drawing.Point(0, 0);
+            this.txtGia.MaxLength = 32767;
+            this.txtGia.Name = "txtGia";
+            this.txtGia.PasswordChar = '\0';
+            this.txtGia.ReadOnly = true;
+            this.txtGia.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtGia.SelectedText = "";
+            this.txtGia.SelectionLength = 0;
+            this.txtGia.SelectionStart = 0;
+            this.txtGia.ShortcutsEnabled = true;
+            this.txtGia.Size = new System.Drawing.Size(232, 30);
+            this.txtGia.TabIndex = 24;
+            this.txtGia.UseSelectable = true;
+            this.txtGia.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtGia.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearch.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Image = global::UI.Properties.Resources.search_fff;
+            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch.Location = new System.Drawing.Point(82, 143);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(158, 28);
+            this.btnSearch.TabIndex = 20;
+            this.btnSearch.Text = "Tìm phòng tương tự";
+            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // notify
+            // 
+            this.notify.AnimationDuration = 100;
+            this.notify.BodyColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(141)))), ((int)(((byte)(40)))));
+            this.notify.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(141)))), ((int)(((byte)(40)))));
+            this.notify.ButtonBorderColor = System.Drawing.Color.White;
+            this.notify.ButtonHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(141)))), ((int)(((byte)(40)))));
+            this.notify.ContentFont = new System.Drawing.Font("Tahoma", 8F);
+            this.notify.ContentHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.notify.ContentText = null;
+            this.notify.HeaderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(141)))), ((int)(((byte)(40)))));
+            this.notify.Image = global::UI.Properties.Resources.tick_fff;
+            this.notify.IsRightToLeft = false;
+            this.notify.OptionsMenu = null;
+            this.notify.Size = new System.Drawing.Size(300, 75);
+            this.notify.TitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.notify.TitleFont = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.notify.TitleText = null;
             // 
             // NhanPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1045, 459);
+            this.Controls.Add(this.lsvKhachHang);
+            this.Controls.Add(this.btnKhachHang);
+            this.Controls.Add(this.btnNhanPhong);
+            this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.panel19);
-            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.lbMaPhong);
             this.Name = "NhanPhong";
             this.Text = "Nhận phòng";
             this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            this.panel8.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nmTreEm)).EndInit();
             this.panel13.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nmSoNguoi)).EndInit();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
             this.panel14.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
             this.panel15.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.panel17.ResumeLayout(false);
@@ -794,7 +683,6 @@
             this.panel22.PerformLayout();
             this.panel23.ResumeLayout(false);
             this.panel23.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -802,37 +690,25 @@
 
         #endregion
         private MetroFramework.Controls.MetroLabel lbMaPhong;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
-        private System.Windows.Forms.Panel panel8;
-        private MetroFramework.Controls.MetroTextBox metroTextBox6;
-        private System.Windows.Forms.Panel panel12;
-        private MetroFramework.Controls.MetroTextBox metroTextBox7;
+        private System.Windows.Forms.NumericUpDown nmTreEm;
+        private System.Windows.Forms.NumericUpDown nmSoNguoi;
         private System.Windows.Forms.Panel panel13;
-        private MetroFramework.Controls.MetroTextBox metroTextBox8;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.NumericUpDown numericUpDown5;
-        private System.Windows.Forms.NumericUpDown numericUpDown6;
         private System.Windows.Forms.Panel panel15;
-        private MetroFramework.Controls.MetroTextBox metroTextBox9;
+        private MetroFramework.Controls.MetroTextBox txtDatCoc;
         private System.Windows.Forms.Panel panel16;
-        private MetroFramework.Controls.MetroTextBox metroTextBox10;
+        private MetroFramework.Controls.MetroTextBox txtTongTien;
         private System.Windows.Forms.Panel panel17;
-        private MetroFramework.Controls.MetroTextBox metroTextBox11;
+        private MetroFramework.Controls.MetroTextBox txtGia;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
@@ -840,14 +716,22 @@
         private System.Windows.Forms.Panel panel21;
         private System.Windows.Forms.Panel panel22;
         private System.Windows.Forms.Panel panel23;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private MetroFramework.Controls.MetroComboBox metroComboBox2;
+        private System.Windows.Forms.Button btnCheck;
+        private System.Windows.Forms.Button btnSearch;
+        private MetroFramework.Controls.MetroComboBox cmbLoaiPhong;
         private MetroFramework.Controls.MetroLabel metroLabel5;
-        private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroLabel metroLabel7;
-        private MetroFramework.Controls.MetroDateTime metroDateTime3;
-        private MetroFramework.Controls.MetroDateTime metroDateTime4;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private MetroFramework.Controls.MetroDateTime checkOut;
+        private System.Windows.Forms.Button btnNhanPhong;
+        private System.Windows.Forms.Button btnHuy;
+        private System.Windows.Forms.Button btnKhachHang;
+        private MetroFramework.Controls.MetroListView lsvKhachHang;
+        private System.Windows.Forms.ColumnHeader maKH;
+        private System.Windows.Forms.ColumnHeader tenKH;
+        private System.Windows.Forms.ColumnHeader CMND;
+        private System.Windows.Forms.ColumnHeader sdt;
+        private System.Windows.Forms.ColumnHeader diaChi;
+        private System.Windows.Forms.Panel panel1;
+        private Tulpep.NotificationWindow.PopupNotifier notify;
     }
 }

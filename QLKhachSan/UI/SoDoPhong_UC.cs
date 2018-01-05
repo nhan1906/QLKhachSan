@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
+using DTO;
 
 namespace UI
 {
@@ -25,11 +26,34 @@ namespace UI
         private PhongService phongService = PhongService.Instance;
 
         private ContextMenu contextMenu = new ContextMenu();
-        public SoDoPhong_UC()
+        private NhanVien info;
+        public SoDoPhong_UC(NhanVien info)
         {
             InitializeComponent();
+            instance = this;
+            this.info = info;
             Sender = new SendMessage(GetMessage);
-            contextMenu.MenuItems.Add("Dọn phòng");
+            MenuItem menuItemDonPhong = new MenuItem("Dọn phòng", DonDepPhong);
+            MenuItem menuItemSuaPhong = new MenuItem("Sửa chữa phòng", SuaChuaPhong);
+            contextMenu.MenuItems.Add(0, menuItemDonPhong);
+            contextMenu.MenuItems.Add(1, menuItemSuaPhong);
+            pnTatCa_Click(pnTatCa, new EventArgs());
+            timer.Start();
+        }
+
+        private void SuaChuaPhong(object sender, EventArgs e)
+        {
+            RoomExpand room = (RoomExpand)contextMenu.Tag;
+            SuaPhong f = new SuaPhong(room.Phong.MaPhong);
+            f.ShowDialog();
+            pnTatCa_Click(pnTatCa, new EventArgs());
+        }
+
+        private void DonDepPhong(object sender, EventArgs e)
+        {
+
+            RoomExpand room = (RoomExpand)contextMenu.Tag;
+            phongService.DonDepPhong(2, room.Phong.MaPhong);//2 là code dọn phòng
             pnTatCa_Click(pnTatCa, new EventArgs());
         }
 
@@ -38,7 +62,7 @@ namespace UI
             get
             {
                 if (instance == null)
-                    instance = new SoDoPhong_UC();
+                    instance = new SoDoPhong_UC(null);
                 return instance;
             }
         }
@@ -66,18 +90,41 @@ namespace UI
         private void Room_MouseClick(object sender, MouseEventArgs e)
         {
             RoomExpand room = (RoomExpand)sender;
+            Phong phong = room.Phong;
             if(e.Button == MouseButtons.Left)
             {
-                /*if (!pnContaner.Controls.ContainsKey("NhanPhong_UC"))
+                if (phong.TenTinhTrangPhong == "Đang sửa")
                 {
-                    NhanPhong_UC uc = NhanPhong_UC.Instance;
-                    uc.Dock = DockStyle.Fill;
-                    uc.Sender(pnContaner);
-                    pnContaner.Controls.Add(uc);
+                    CapNhatSuaPhong fCapNhatSuaPhong = new CapNhatSuaPhong(phong.MaPhong);
+                    fCapNhatSuaPhong.ShowDialog();
+                    pnTatCa_Click(pnTatCa, new EventArgs());
+                    return;
                 }
-                pnContaner.Controls["NhanPhong_UC"].BringToFront();*/
-                NhanPhong f = new NhanPhong();
-                f.ShowDialog();
+                if (phong.TenTinhTrangPhong == "Nhận phòng")
+                {
+                    if (!pnContaner.Controls.ContainsKey("NhanPhong_UC"))
+                    {
+                        NhanPhong_UC uc = new NhanPhong_UC(phong);
+                        uc.Dock = DockStyle.Fill;
+                        uc.Sender(pnContaner);
+                        pnContaner.Controls.Add(uc);
+                    }
+                    pnContaner.Controls["NhanPhong_UC"].BringToFront();
+                }
+                if (phong.TenTinhTrangPhong == "Trống")
+                {
+                    NhanPhong fNhanPhong = new NhanPhong(phong , info);
+                    fNhanPhong.ShowDialog();
+                    pnTatCa_Click(pnTatCa, new EventArgs());
+                    return;
+                }
+                if (phong.TenTinhTrangPhong == "Đã đặt")
+                {
+                    NhanPhongDaDatTruoc fNhanPhongDatTruoc = new NhanPhongDaDatTruoc();
+                    fNhanPhongDatTruoc.ShowDialog();
+                    return;
+                }
+                
             }
             else if(e.Button == MouseButtons.Right)
             {
@@ -237,6 +284,22 @@ namespace UI
             pnDangSua_Click(pnDangSua, e);
         }
         #endregion
-        
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            int hour = DateTime.Now.Hour;
+            int min = DateTime.Now.Minute;
+            int second = DateTime.Now.Second;
+            //Tạo bảng quy định
+            if (DateTime.Now.TimeOfDay == new TimeSpan(12, 0 ,0))
+            {
+
+            }
+            if (hour == 14 && min == 11)
+            {
+                phongService.CapNhatPhongDaDat();
+                pnTatCa_Click(pnTatCa, new EventArgs());
+            }
+        }
     }
 }

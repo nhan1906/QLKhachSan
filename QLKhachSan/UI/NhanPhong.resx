@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="metroTextBox9.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtDatCoc.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAATdJREFUWEftkj0KhDAQRvewHscjeAtLSys7KxsbG1sbCwuFLC/sF8YYYWFht9gM
@@ -129,7 +129,7 @@
         Gk3T5NdqlLIYPgnwTWWADJABMsC/AxTuCeaDmRPn4516AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="metroTextBox10.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtTongTien.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAATdJREFUWEftkj0KhDAQRvewHscjeAtLSys7KxsbG1sbCwuFLC/sF8YYYWFht9gM
@@ -140,7 +140,7 @@
         Gk3T5NdqlLIYPgnwTWWADJABMsC/AxTuCeaDmRPn4516AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="metroTextBox11.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtGia.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAATdJREFUWEftkj0KhDAQRvewHscjeAtLSys7KxsbG1sbCwuFLC/sF8YYYWFht9gM
@@ -151,4 +151,10 @@
         Gk3T5NdqlLIYPgnwTWWADJABMsC/AxTuCeaDmRPn4516AAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="notify.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
 </root>

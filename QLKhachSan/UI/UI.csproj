@@ -62,17 +62,47 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CapNhatSuaPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapNhatSuaPhong.Designer.cs">
+      <DependentUpon>CapNhatSuaPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChonPhongDatPhong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ChonPhongDatPhong.Designer.cs">
       <DependentUpon>ChonPhongDatPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChuyenPhongForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChuyenPhongForm.Designer.cs">
+      <DependentUpon>ChuyenPhongForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DangNhapForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangNhapForm.Designer.cs">
+      <DependentUpon>DangNhapForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatCocForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatCocForm.Designer.cs">
+      <DependentUpon>DatCocForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatPhong_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="DatPhong_UC.Designer.cs">
       <DependentUpon>DatPhong_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DichVu_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DichVu_UC.Designer.cs">
+      <DependentUpon>DichVu_UC.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -85,6 +115,12 @@
     </Compile>
     <Compile Include="NhanPhong.Designer.cs">
       <DependentUpon>NhanPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanPhongDaDatTruoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanPhongDaDatTruoc.Designer.cs">
+      <DependentUpon>NhanPhongDaDatTruoc.cs</DependentUpon>
     </Compile>
     <Compile Include="NhanPhong_UC.cs">
       <SubType>UserControl</SubType>
@@ -118,11 +154,29 @@
     <Compile Include="SoDoPhong_UC.Designer.cs">
       <DependentUpon>SoDoPhong_UC.cs</DependentUpon>
     </Compile>
+    <Compile Include="SoLuongDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SoLuongDV.Designer.cs">
+      <DependentUpon>SoLuongDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="SuaPhong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SuaPhong.Designer.cs">
       <DependentUpon>SuaPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemKhachHang.Designer.cs">
+      <DependentUpon>ThemKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="ThemLoaiPhong.cs">
       <SubType>UserControl</SubType>
@@ -148,11 +202,26 @@
     <Compile Include="ThongBaoDatPhongThanhCong.Designer.cs">
       <DependentUpon>ThongBaoDatPhongThanhCong.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CapNhatSuaPhong.resx">
+      <DependentUpon>CapNhatSuaPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChonPhongDatPhong.resx">
       <DependentUpon>ChonPhongDatPhong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChuyenPhongForm.resx">
+      <DependentUpon>ChuyenPhongForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DangNhapForm.resx">
+      <DependentUpon>DangNhapForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatCocForm.resx">
+      <DependentUpon>DatCocForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DatPhong_UC.resx">
       <DependentUpon>DatPhong_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DichVu_UC.resx">
+      <DependentUpon>DichVu_UC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -185,8 +254,17 @@
     <EmbeddedResource Include="SoDoPhong_UC.resx">
       <DependentUpon>SoDoPhong_UC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SoLuongDV.resx">
+      <DependentUpon>SoLuongDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SuaPhong.resx">
       <DependentUpon>SuaPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemKhachHang.resx">
+      <DependentUpon>ThemKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemLoaiPhong.resx">
       <DependentUpon>ThemLoaiPhong.cs</DependentUpon>
@@ -265,6 +343,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\vnd1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

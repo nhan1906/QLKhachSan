@@ -14,6 +14,8 @@ namespace DTO
         private int tangThu;
         private string maLoaiPhong;
         private string tenTinhTrangPhong;
+        private int ban;
+        private string maHDHienTai;
 
         public int MaPhong
         {
@@ -80,6 +82,32 @@ namespace DTO
             }
         }
 
+        public int Ban
+        {
+            get
+            {
+                return ban;
+            }
+
+            set
+            {
+                ban = value;
+            }
+        }
+
+        public string MaHDHienTai
+        {
+            get
+            {
+                return maHDHienTai;
+            }
+
+            set
+            {
+                maHDHienTai = value;
+            }
+        }
+
         public Phong() { }
 
         public Phong(DataRow row)
@@ -89,6 +117,8 @@ namespace DTO
             TangThu = (int)row["tangThu"];
             MaLoaiPhong = row["maLoaiPhong"].ToString();
             TenTinhTrangPhong = row["tenTinhTrangPhong"].ToString();
+            Ban = (int)row["Ban"];
+            MaHDHienTai = row["maHDHienTai"].ToString();
         }
     }
 }

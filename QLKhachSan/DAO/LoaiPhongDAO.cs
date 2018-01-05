@@ -46,6 +46,17 @@ namespace DAO
             return provider.ExecuteNonQuery(query , new object[] { loaiPhong.MaLoaiPhong , loaiPhong.TenChatLuong , loaiPhong.TenLoaiGiuong , loaiPhong.GiaGio , loaiPhong.GiaDem , loaiPhong.GiaNgay , loaiPhong.SoNguoiToiDa , loaiPhong.HinhMoTa}) > 0;
         }
 
+        public LoaiPhong LayLoaiPhongBangMa(string maLoaiPhong)
+        {
+            string query = "Select * from LoaiPhong where maLoaiPhong = N'"+maLoaiPhong+"'";
+            DataTable data = provider.ExecuteQuery(query);
+            foreach(DataRow row in data.Rows)
+            {
+                return new LoaiPhong(row);
+            }
+            return null;
+        }
+
         public bool KiemTraTonTaiCua(LoaiPhong loaiPhong)
         {
             string query = "Select * from LoaiPhong where tenChatLuong = N'" + loaiPhong.TenChatLuong +  "' and tenLoaiGiuong = N'" + loaiPhong.TenLoaiGiuong + "'";

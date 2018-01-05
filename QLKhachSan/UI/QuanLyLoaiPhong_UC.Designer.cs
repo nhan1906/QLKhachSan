@@ -87,6 +87,7 @@
             this.dtgvLoaiPhong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvLoaiPhong.Location = new System.Drawing.Point(20, 50);
             this.dtgvLoaiPhong.Name = "dtgvLoaiPhong";
+            this.dtgvLoaiPhong.RowTemplate.Height = 80;
             this.dtgvLoaiPhong.Size = new System.Drawing.Size(610, 520);
             this.dtgvLoaiPhong.TabIndex = 4;
             // 

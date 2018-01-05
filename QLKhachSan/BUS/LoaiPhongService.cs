@@ -36,7 +36,12 @@ namespace BUS
             cmbLoaiPhong.DataSource = data.LayDanhSachLoaiPhong();
             cmbLoaiPhong.DisplayMember = "maLoaiPhong";
         }
-        
+
+        public LoaiPhong LayLoaiPhongBangMa(string maLoaiPhong)
+        {
+            return data.LayLoaiPhongBangMa(maLoaiPhong);
+        }
+
         public void HienThiComboBoxAll(MetroComboBox cmbLoaiPhong)
         {
             List<LoaiPhong> list = data.LayDanhSachLoaiPhong();

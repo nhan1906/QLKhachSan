@@ -29,47 +29,28 @@
         private void InitializeComponent()
         {
             this.dtEnd = new MetroFramework.Controls.MetroDateTime();
-            this.dtStart = new MetroFramework.Controls.MetroDateTime();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.rtxtGhiChu = new System.Windows.Forms.RichTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.lbMaPhong = new MetroFramework.Controls.MetroLabel();
+            this.notify = new Tulpep.NotificationWindow.PopupNotifier();
             this.SuspendLayout();
             // 
             // dtEnd
             // 
             this.dtEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtEnd.Location = new System.Drawing.Point(168, 134);
+            this.dtEnd.Location = new System.Drawing.Point(168, 81);
             this.dtEnd.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtEnd.Name = "dtEnd";
             this.dtEnd.Size = new System.Drawing.Size(258, 29);
             this.dtEnd.TabIndex = 1;
             // 
-            // dtStart
-            // 
-            this.dtStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtStart.Location = new System.Drawing.Point(168, 85);
-            this.dtStart.MinimumSize = new System.Drawing.Size(0, 29);
-            this.dtStart.Name = "dtStart";
-            this.dtStart.Size = new System.Drawing.Size(258, 29);
-            this.dtStart.TabIndex = 0;
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(67, 85);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(89, 19);
-            this.metroLabel2.TabIndex = 12;
-            this.metroLabel2.Text = "Ngày bắt đầu";
-            // 
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(34, 134);
+            this.metroLabel4.Location = new System.Drawing.Point(34, 81);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(122, 19);
             this.metroLabel4.TabIndex = 13;
@@ -77,7 +58,7 @@
             // 
             // rtxtGhiChu
             // 
-            this.rtxtGhiChu.Location = new System.Drawing.Point(168, 179);
+            this.rtxtGhiChu.Location = new System.Drawing.Point(168, 126);
             this.rtxtGhiChu.Name = "rtxtGhiChu";
             this.rtxtGhiChu.Size = new System.Drawing.Size(258, 68);
             this.rtxtGhiChu.TabIndex = 14;
@@ -86,31 +67,32 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(104, 179);
+            this.metroLabel1.Location = new System.Drawing.Point(104, 126);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(52, 19);
             this.metroLabel1.TabIndex = 13;
             this.metroLabel1.Text = "Ghi chú";
             // 
-            // button3
+            // btnClose
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(186)))), ((int)(((byte)(195)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(154)))), ((int)(((byte)(163)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(154)))), ((int)(((byte)(163)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::UI.Properties.Resources.back_fff;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(351, 262);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(73, 32);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "Trở về";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(186)))), ((int)(((byte)(195)))));
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(154)))), ((int)(((byte)(163)))));
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(154)))), ((int)(((byte)(163)))));
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Image = global::UI.Properties.Resources.back_fff;
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.Location = new System.Drawing.Point(353, 200);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(73, 32);
+            this.btnClose.TabIndex = 16;
+            this.btnClose.Text = "Trở về";
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnCapNhat
             // 
@@ -124,7 +106,7 @@
             this.btnCapNhat.ForeColor = System.Drawing.Color.White;
             this.btnCapNhat.Image = global::UI.Properties.Resources.save_fff;
             this.btnCapNhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCapNhat.Location = new System.Drawing.Point(254, 262);
+            this.btnCapNhat.Location = new System.Drawing.Point(256, 200);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(91, 32);
             this.btnCapNhat.TabIndex = 15;
@@ -144,20 +126,29 @@
             this.lbMaPhong.TabIndex = 17;
             this.lbMaPhong.Text = "301";
             // 
+            // notify
+            // 
+            this.notify.ContentFont = new System.Drawing.Font("Tahoma", 8F);
+            this.notify.ContentText = null;
+            this.notify.Image = null;
+            this.notify.IsRightToLeft = false;
+            this.notify.OptionsMenu = null;
+            this.notify.Size = new System.Drawing.Size(400, 100);
+            this.notify.TitleFont = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.notify.TitleText = null;
+            // 
             // SuaPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(519, 304);
+            this.ClientSize = new System.Drawing.Size(451, 274);
             this.Controls.Add(this.lbMaPhong);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.rtxtGhiChu);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.metroLabel4);
-            this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.dtEnd);
-            this.Controls.Add(this.dtStart);
             this.Name = "SuaPhong";
             this.Text = "Sửa phòng";
             this.ResumeLayout(false);
@@ -168,13 +159,12 @@
         #endregion
 
         private MetroFramework.Controls.MetroDateTime dtEnd;
-        private MetroFramework.Controls.MetroDateTime dtStart;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private System.Windows.Forms.RichTextBox rtxtGhiChu;
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnCapNhat;
         private MetroFramework.Controls.MetroLabel lbMaPhong;
+        private Tulpep.NotificationWindow.PopupNotifier notify;
     }
 }

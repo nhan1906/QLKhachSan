@@ -51,6 +51,9 @@ namespace BUS
             dtgv.DataSource = thongKeDAO.LayDanhSachDKTheoLoai(maDatPhong);
         }
 
-
+        public bool KiemTraDaTonTaiMa(string maHD)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -41,16 +41,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account.cs" />
     <Compile Include="BangHienTrangPhongDat.cs" />
     <Compile Include="ChatLuong.cs" />
     <Compile Include="ChiTietDatPhong.cs" />
+    <Compile Include="ChiTietHoatDong.cs" />
     <Compile Include="DataProvider.cs" />
+    <Compile Include="DichVu.cs" />
     <Compile Include="KhachHang.cs" />
+    <Compile Include="KhachHangOPhong.cs" />
     <Compile Include="LoaiGiuong.cs" />
+    <Compile Include="LoaiHoatDong.cs" />
     <Compile Include="LoaiPhong.cs" />
+    <Compile Include="NhanVien.cs" />
+    <Compile Include="NhomDichVu.cs" />
+    <Compile Include="PhieuDatCocTienPhong.cs" />
     <Compile Include="PhieuDatPhong.cs" />
+    <Compile Include="PhieuNhanPhong.cs" />
+    <Compile Include="PhieuSuaChua.cs" />
     <Compile Include="Phong.cs" />
+    <Compile Include="PhongBan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SoYeuLiLich.cs" />
     <Compile Include="Tang.cs" />
     <Compile Include="ThongKePhongDKTheoLoai.cs" />
     <Compile Include="TinhTrangPhong.cs" />
