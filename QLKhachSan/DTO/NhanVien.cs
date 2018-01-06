@@ -14,6 +14,7 @@ namespace DTO
         private string maLL;
         private string thuocPhongBan;
         private SoYeuLiLich lyLich;
+       
 
         public NhanVien() { }
 

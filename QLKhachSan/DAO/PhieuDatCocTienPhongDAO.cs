@@ -33,7 +33,14 @@ namespace DAO
             int idDC = (int) provider.ExecuteScalar("select max(idDC) from PhieuDatCocTienPhong");
             return new PhieuDatCocTienPhong(provider.ExecuteQuery("select * from PhieuDatCocTienPhong where idDC = " + idDC).Rows[0]);
         }
-        
+
+        public float TongtienDatCocTheoMaHD(string maHDHienTai)
+        {
+            string query = "select Sum(soTien) from PhieuDatCocTienPhong inner join ChiTietHoatDong on PhieuDatCocTienPhong.maDC = ChiTietHoatDong.maLQ where maHD = N'" + maHDHienTai + "'";
+            if (provider.ExecuteScalar(query).ToString() == "")
+                return 0;
+            return (float)((double)provider.ExecuteScalar(query));
+        }
 
         public bool ThemPhieuDatCocTienPhong(PhieuDatCocTienPhong phieu)
         {

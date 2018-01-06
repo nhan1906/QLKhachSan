@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BUS
 {
@@ -27,5 +28,10 @@ namespace BUS
         #endregion
 
         private NhanVienDAO data = NhanVienDAO.Instance;
+
+        public void HienThiLenDataGridView(DataGridView dtgv)
+        {
+            dtgv.DataSource = data.DanhSachTatCaNhanVien();
+        }
     }
 }

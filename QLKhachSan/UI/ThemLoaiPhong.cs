@@ -61,8 +61,6 @@ namespace UI
 
             if (Save())
             {
-                txtGio.Text = "";
-                txtDem.Text = "";
                 txtNgay.Text = "";
             }
         }
@@ -85,10 +83,7 @@ namespace UI
             LoaiGiuong loaiGiuong = (LoaiGiuong)cmbLoaiGiuong.SelectedItem;
             loaiPhong.TenChatLuong = chatLuong.TenChatLuong;
             loaiPhong.TenLoaiGiuong = loaiGiuong.TenLoaiGiuong;
-            if(txtGio.Text != "")
-                loaiPhong.GiaGio = Convert.ToInt32(txtGio.Text);
-            if(txtDem.Text != "")
-                loaiPhong.GiaDem = Convert.ToInt32(txtDem.Text);
+            
             loaiPhong.GiaNgay = Convert.ToInt32(txtNgay.Text);
             loaiPhong.SoNguoiToiDa = (int) nmNguoiToiDa.Value;
             int result = loaiPhongService.ThemLoaiPhong(loaiPhong);
@@ -124,27 +119,12 @@ namespace UI
                     flag = true;
                 }
             }
-            if (txtGio.Text != "")
-            {
-                if (KiemTraMoney(txtGio))
-                {
-                    flag = true;
-                }
-            }
-            if (txtDem.Text != "")
-            {
-                if (KiemTraMoney(txtDem))
-                {
-                    flag = true;
-                }
-            }
+            
             return flag;
         }
 
         private void SetDefaultError()
         {
-            error.SetError(txtGio, "");
-            error.SetError(txtDem, "");
             error.SetError(txtNgay, "");
         }
 

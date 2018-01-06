@@ -129,33 +129,11 @@
         Gk3T5NdqlLIYPgnwTWWADJABMsC/AxTuCeaDmRPn4516AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="txtDem.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAATdJREFUWEftkj0KhDAQRvewHscjeAtLSys7KxsbG1sbCwuFLC/sF8YYYWFht9gM
-        fJhM5uc5yaMoCvdLZYAMkAEyQAZ4lGXplmVxsm3bXFVV/pAve/mP4/Br4slTkbZtvR8jbp7n1+5qwzCE
-        PBQmQJJtLrHnTA3VDF8cN45j2Nd17evxlY/mcW4ASCXI3zRN2AOgP2Qt/zsASD+g3ACgq4hH1HXdaSok
-        IuL2fQ8N3gVQH03h9Agpaq+B4L7vwzkSgArpPVgAzmOzdWmuvBMAAQRSQIW0lqxP8YBbAHQ3AXQLoEON
-        h4KilmIo1hiT+vgKEAW5W762oD23ACj1uu8ABKwaFwARrut6aYRoFvvjv0IpgBToBQARqDuyfhJlxNgz
-        Gk3T5NdqlLIYPgnwTWWADJABMsC/AxTuCeaDmRPn4516AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="txtGio.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAATdJREFUWEftkj0KhDAQRvewHscjeAtLSys7KxsbG1sbCwuFLC/sF8YYYWFht9gM
-        fJhM5uc5yaMoCvdLZYAMkAEyQAZ4lGXplmVxsm3bXFVV/pAve/mP4/Br4slTkbZtvR8jbp7n1+5qwzCE
-        PBQmQJJtLrHnTA3VDF8cN45j2Nd17evxlY/mcW4ASCXI3zRN2AOgP2Qt/zsASD+g3ACgq4hH1HXdaSok
-        IuL2fQ8N3gVQH03h9Agpaq+B4L7vwzkSgArpPVgAzmOzdWmuvBMAAQRSQIW0lqxP8YBbAHQ3AXQLoEON
-        h4KilmIo1hiT+vgKEAW5W762oD23ACj1uu8ABKwaFwARrut6aYRoFvvjv0IpgBToBQARqDuyfhJlxNgz
-        Gk3T5NdqlLIYPgnwTWWADJABMsC/AxTuCeaDmRPn4516AAAAAElFTkSuQmCC
-</value>
-  </data>
   <metadata name="error.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>58</value>
+    <value>154</value>
   </metadata>
   <metadata name="openDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>95, 17</value>

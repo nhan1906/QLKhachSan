@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnBar = new System.Windows.Forms.Panel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.btnUser = new System.Windows.Forms.Button();
             this.btnPower = new System.Windows.Forms.Button();
             this.flpMenu = new System.Windows.Forms.FlowLayoutPanel();
@@ -47,8 +48,10 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.btnKhachHang = new System.Windows.Forms.Button();
+            this.btnQLTaiKhoan = new System.Windows.Forms.Button();
             this.pnContainer = new System.Windows.Forms.Panel();
             this.notify = new Tulpep.NotificationWindow.PopupNotifier();
+            this.btnQuanLyNhanVien = new System.Windows.Forms.Button();
             this.pnBar.SuspendLayout();
             this.flpMenu.SuspendLayout();
             this.flpQuanLy.SuspendLayout();
@@ -58,6 +61,7 @@
             // pnBar
             // 
             this.pnBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.pnBar.Controls.Add(this.metroLabel1);
             this.pnBar.Controls.Add(this.btnUser);
             this.pnBar.Controls.Add(this.btnPower);
             this.pnBar.Dock = System.Windows.Forms.DockStyle.Top;
@@ -65,6 +69,20 @@
             this.pnBar.Name = "pnBar";
             this.pnBar.Size = new System.Drawing.Size(800, 30);
             this.pnBar.TabIndex = 2;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel1.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.metroLabel1.Location = new System.Drawing.Point(10, 5);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(137, 19);
+            this.metroLabel1.TabIndex = 5;
+            this.metroLabel1.Text = "Khách sạn Đại Nam";
+            this.metroLabel1.UseCustomBackColor = true;
+            this.metroLabel1.UseCustomForeColor = true;
             // 
             // btnUser
             // 
@@ -101,6 +119,8 @@
             this.flpMenu.Controls.Add(this.btnDanhMuc);
             this.flpMenu.Controls.Add(this.flowLayoutPanel1);
             this.flpMenu.Controls.Add(this.btnKhachHang);
+            this.flpMenu.Controls.Add(this.btnQLTaiKhoan);
+            this.flpMenu.Controls.Add(this.btnQuanLyNhanVien);
             this.flpMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.flpMenu.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flpMenu.Location = new System.Drawing.Point(0, 30);
@@ -352,6 +372,21 @@
             this.btnKhachHang.UseVisualStyleBackColor = true;
             this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
             // 
+            // btnQLTaiKhoan
+            // 
+            this.btnQLTaiKhoan.FlatAppearance.BorderSize = 0;
+            this.btnQLTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQLTaiKhoan.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLTaiKhoan.Location = new System.Drawing.Point(3, 498);
+            this.btnQLTaiKhoan.Name = "btnQLTaiKhoan";
+            this.btnQLTaiKhoan.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnQLTaiKhoan.Size = new System.Drawing.Size(144, 31);
+            this.btnQLTaiKhoan.TabIndex = 25;
+            this.btnQLTaiKhoan.Text = "Tài khoản";
+            this.btnQLTaiKhoan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQLTaiKhoan.UseVisualStyleBackColor = true;
+            this.btnQLTaiKhoan.Click += new System.EventHandler(this.btnQLTaiKhoan_Click);
+            // 
             // pnContainer
             // 
             this.pnContainer.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -371,6 +406,21 @@
             this.notify.TitleFont = new System.Drawing.Font("Segoe UI", 11.25F);
             this.notify.TitleText = null;
             // 
+            // btnQuanLyNhanVien
+            // 
+            this.btnQuanLyNhanVien.FlatAppearance.BorderSize = 0;
+            this.btnQuanLyNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuanLyNhanVien.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuanLyNhanVien.Location = new System.Drawing.Point(3, 535);
+            this.btnQuanLyNhanVien.Name = "btnQuanLyNhanVien";
+            this.btnQuanLyNhanVien.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnQuanLyNhanVien.Size = new System.Drawing.Size(144, 31);
+            this.btnQuanLyNhanVien.TabIndex = 26;
+            this.btnQuanLyNhanVien.Text = "Nhân viên";
+            this.btnQuanLyNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnQuanLyNhanVien.UseVisualStyleBackColor = true;
+            this.btnQuanLyNhanVien.Click += new System.EventHandler(this.btnQuanLyNhanVien_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -387,6 +437,7 @@
             this.Text = "Main";
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Main_KeyPress);
             this.pnBar.ResumeLayout(false);
+            this.pnBar.PerformLayout();
             this.flpMenu.ResumeLayout(false);
             this.flpQuanLy.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -416,6 +467,9 @@
         private System.Windows.Forms.Panel pnContainer;
         private Tulpep.NotificationWindow.PopupNotifier notify;
         private System.Windows.Forms.Button btnUser;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private System.Windows.Forms.Button btnQLTaiKhoan;
+        private System.Windows.Forms.Button btnQuanLyNhanVien;
     }
 }
 

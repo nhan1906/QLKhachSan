@@ -23,7 +23,7 @@ namespace UI
             get
             {
                 if (instance == null)
-                    instance = new Main(null);
+                    instance = new Main(null ,null);
                 return instance;
             }
         }
@@ -43,14 +43,16 @@ namespace UI
             }
         }
 
-        private NhanVien account;
+        private NhanVien nhanVien;
+        private Account account;
 
-        public Main(NhanVien account)
+        public Main(NhanVien nhanvien, Account account)
         {
             InitializeComponent();
             instance = this;
+            this.nhanVien = nhanvien;
             this.account = account;
-            notify.TitleText = "Chào " + account.LyLich.Ten + "!";
+            notify.TitleText = "Chào " + nhanvien.LyLich.Ten + "!";
             notify.Popup();
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
             btnSoDoPhong_Click(btnSoDoPhong ,new EventArgs());
@@ -75,7 +77,7 @@ namespace UI
             SetClickButton(sender);
             if (!pnContainer.Controls.ContainsKey("SoDoPhong_UC"))
             {
-                SoDoPhong_UC uc = new SoDoPhong_UC(account);
+                SoDoPhong_UC uc = new SoDoPhong_UC(nhanVien);
                 uc.Dock = DockStyle.Fill;
                 uc.Sender(pnContainer);
                 pnContainer.Controls.Add(uc);
@@ -108,6 +110,19 @@ namespace UI
                 pnContainer.Controls.Add(uc);
             }
             pnContainer.Controls["DatPhong_UC"].BringToFront();
+        }
+
+        private void btnKhachHang_Click(object sender, EventArgs e)
+        {
+            SetClickButton(sender);
+            if (!pnContainer.Controls.ContainsKey("KhachHang_UC"))
+            {
+                KhachHang_UC uc = KhachHang_UC.Instance;
+                uc.Dock = DockStyle.Fill;
+                pnContainer.Controls.Add(uc);
+            }
+            pnContainer.Controls["KhachHang_UC"].BringToFront();
+
         }
 
         private void btnQuanLy_Click(object sender, EventArgs e)
@@ -190,9 +205,28 @@ namespace UI
             SetClickButton(sender);
         }
 
-        private void btnKhachHang_Click(object sender, EventArgs e)
+        private void btnQLTaiKhoan_Click(object sender, EventArgs e)
         {
             SetClickButton(sender);
+            if (!pnContainer.Controls.ContainsKey("QuanLyTaiKhoan_UC"))
+            {
+                QuanLyTaiKhoan_UC uc = new QuanLyTaiKhoan_UC(account);
+                uc.Dock = DockStyle.Fill;
+                pnContainer.Controls.Add(uc);
+            }
+            pnContainer.Controls["QuanLyTaiKhoan_UC"].BringToFront();
+        }
+
+        private void btnQuanLyNhanVien_Click(object sender, EventArgs e)
+        {
+            SetClickButton(sender);
+            if (!pnContainer.Controls.ContainsKey("QuanLyNhanVien_UC"))
+            {
+                QuanLyNhanVien_UC uc = new QuanLyNhanVien_UC();
+                uc.Dock = DockStyle.Fill;
+                pnContainer.Controls.Add(uc);
+            }
+            pnContainer.Controls["QuanLyNhanVien_UC"].BringToFront();
         }
     }
 }

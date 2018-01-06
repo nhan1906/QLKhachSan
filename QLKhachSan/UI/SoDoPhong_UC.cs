@@ -24,6 +24,7 @@ namespace UI
         }
         private static SoDoPhong_UC instance;
         private PhongService phongService = PhongService.Instance;
+        private LoaiPhongService loaiPhongService = LoaiPhongService.Instance;
 
         private ContextMenu contextMenu = new ContextMenu();
         private NhanVien info;
@@ -108,7 +109,10 @@ namespace UI
                         uc.Dock = DockStyle.Fill;
                         uc.Sender(pnContaner);
                         pnContaner.Controls.Add(uc);
+                        pnContaner.Controls["NhanPhong_UC"].BringToFront();
+                        return;
                     }
+                    NhanPhong_UC.Instance.CapNhat(phong);
                     pnContaner.Controls["NhanPhong_UC"].BringToFront();
                 }
                 if (phong.TenTinhTrangPhong == "Trống")
@@ -136,30 +140,40 @@ namespace UI
         private void pnTrong_Click(object sender, EventArgs e)
         {
             SetClick(sender);
+            phongService.HienThiDanhSachPhongTheoLoai(flpPhong, "Trống");
+            SetClickForRoom();
             pnAccent2.Visible = true;
         }
 
         private void pnNhanPhong_Click(object sender, EventArgs e)
         {
             SetClick(sender);
+            phongService.HienThiDanhSachPhongTheoLoai(flpPhong, "Nhận phòng");
+            SetClickForRoom();
             pnAccent3.Visible = true;
         }
 
         private void pnQuaHan_Click(object sender, EventArgs e)
         {
             SetClick(sender);
+            phongService.HienThiDanhSachPhongTheoLoai(flpPhong, "Quá hạn");
+            SetClickForRoom();
             pnAccent4.Visible = true;
         }
 
         private void pnDaDat_Click(object sender, EventArgs e)
         {
             SetClick(sender);
+            phongService.HienThiDanhSachPhongTheoLoai(flpPhong, "Đã đặt");
+            SetClickForRoom();
             pnAccent5.Visible = true;
         }
 
         private void pnKhongDen_Click(object sender, EventArgs e)
         {
             SetClick(sender);
+            phongService.HienThiDanhSachPhongTheoLoai(flpPhong, "Không đến");
+            SetClickForRoom();
             pnAccent6.Visible = true;
         }
 
@@ -172,6 +186,8 @@ namespace UI
         private void pnDangSua_Click(object sender, EventArgs e)
         {
             SetClick(sender);
+            phongService.HienThiDanhSachPhongTheoLoai(flpPhong, "Đang sửa");
+            SetClickForRoom();
             pnAccent8.Visible = true;
         }
 

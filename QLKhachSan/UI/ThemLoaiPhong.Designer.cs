@@ -30,13 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThemLoaiPhong));
-            this.button7 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.nmNguoiToiDa = new System.Windows.Forms.NumericUpDown();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.cmbLoaiGiuong = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.cmbChatLuong = new MetroFramework.Controls.MetroComboBox();
@@ -54,11 +50,7 @@
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.lbmaLoaiPhong = new MetroFramework.Controls.MetroLabel();
             this.maLoaiPhongLB = new MetroFramework.Controls.MetroLabel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.txtNgay = new MetroFramework.Controls.MetroTextBox();
-            this.txtDem = new MetroFramework.Controls.MetroTextBox();
-            this.txtGio = new MetroFramework.Controls.MetroTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.error = new System.Windows.Forms.ErrorProvider(this.components);
             this.openDialog = new System.Windows.Forms.OpenFileDialog();
@@ -71,43 +63,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             this.SuspendLayout();
             // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(139)))), ((int)(((byte)(202)))));
-            this.button7.Image = global::UI.Properties.Resources.add_accent;
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(312, 370);
-            this.button7.Name = "button7";
-            this.button7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button7.Size = new System.Drawing.Size(273, 28);
-            this.button7.TabIndex = 20;
-            this.button7.Text = "Giá các ngày tiếp theo";
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(139)))), ((int)(((byte)(202)))));
-            this.button5.Image = global::UI.Properties.Resources.add_accent;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(312, 226);
-            this.button5.Name = "button5";
-            this.button5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button5.Size = new System.Drawing.Size(273, 28);
-            this.button5.TabIndex = 20;
-            this.button5.Text = "Giá các giờ tiếp theo";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
             // nmNguoiToiDa
             // 
-            this.nmNguoiToiDa.Location = new System.Drawing.Point(15, 454);
+            this.nmNguoiToiDa.Location = new System.Drawing.Point(312, 246);
             this.nmNguoiToiDa.Name = "nmNguoiToiDa";
             this.nmNguoiToiDa.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.nmNguoiToiDa.Size = new System.Drawing.Size(262, 20);
@@ -117,41 +75,21 @@
             // 
             this.metroLabel7.AutoSize = true;
             this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel7.Location = new System.Drawing.Point(15, 418);
+            this.metroLabel7.Location = new System.Drawing.Point(312, 210);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(112, 19);
             this.metroLabel7.TabIndex = 18;
             this.metroLabel7.Text = "Số người tối đa";
             // 
-            // metroLabel6
-            // 
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel6.Location = new System.Drawing.Point(15, 269);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(65, 19);
-            this.metroLabel6.TabIndex = 15;
-            this.metroLabel6.Text = "Giá đêm";
-            // 
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel5.Location = new System.Drawing.Point(15, 340);
+            this.metroLabel5.Location = new System.Drawing.Point(15, 208);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(68, 19);
             this.metroLabel5.TabIndex = 13;
             this.metroLabel5.Text = "Giá ngày";
-            // 
-            // metroLabel4
-            // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel4.Location = new System.Drawing.Point(15, 199);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(57, 19);
-            this.metroLabel4.TabIndex = 11;
-            this.metroLabel4.Text = "Giá giờ";
             // 
             // cmbLoaiGiuong
             // 
@@ -307,21 +245,13 @@
             this.panel5.Controls.Add(this.metroLabel9);
             this.panel5.Controls.Add(this.lbmaLoaiPhong);
             this.panel5.Controls.Add(this.maLoaiPhongLB);
-            this.panel5.Controls.Add(this.button7);
-            this.panel5.Controls.Add(this.button6);
-            this.panel5.Controls.Add(this.button5);
-            this.panel5.Controls.Add(this.button4);
             this.panel5.Controls.Add(this.nmNguoiToiDa);
             this.panel5.Controls.Add(this.metroLabel7);
             this.panel5.Controls.Add(this.txtNgay);
-            this.panel5.Controls.Add(this.txtDem);
-            this.panel5.Controls.Add(this.metroLabel6);
             this.panel5.Controls.Add(this.metroLabel5);
-            this.panel5.Controls.Add(this.metroLabel4);
             this.panel5.Controls.Add(this.cmbLoaiGiuong);
             this.panel5.Controls.Add(this.metroLabel3);
             this.panel5.Controls.Add(this.cmbChatLuong);
-            this.panel5.Controls.Add(this.txtGio);
             this.panel5.Controls.Add(this.metroLabel2);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(23, 3);
@@ -381,40 +311,6 @@
             this.maLoaiPhongLB.UseCustomBackColor = true;
             this.maLoaiPhongLB.UseCustomForeColor = true;
             // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(139)))), ((int)(((byte)(202)))));
-            this.button6.Image = global::UI.Properties.Resources.add_accent;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(312, 446);
-            this.button6.Name = "button6";
-            this.button6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button6.Size = new System.Drawing.Size(273, 28);
-            this.button6.TabIndex = 20;
-            this.button6.Text = "Giá phụ thu thêm người";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(139)))), ((int)(((byte)(202)))));
-            this.button4.Image = global::UI.Properties.Resources.add_accent;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(312, 297);
-            this.button4.Name = "button4";
-            this.button4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button4.Size = new System.Drawing.Size(273, 28);
-            this.button4.TabIndex = 20;
-            this.button4.Text = "Giá phụ thu theo giờ";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
             // txtNgay
             // 
             this.txtNgay.BackColor = System.Drawing.Color.DarkGray;
@@ -434,7 +330,7 @@
             this.txtNgay.Icon = ((System.Drawing.Image)(resources.GetObject("txtNgay.Icon")));
             this.txtNgay.IconRight = true;
             this.txtNgay.Lines = new string[0];
-            this.txtNgay.Location = new System.Drawing.Point(15, 375);
+            this.txtNgay.Location = new System.Drawing.Point(15, 243);
             this.txtNgay.MaxLength = 32767;
             this.txtNgay.Name = "txtNgay";
             this.txtNgay.PasswordChar = '\0';
@@ -451,80 +347,6 @@
             this.txtNgay.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtNgay.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.txtNgay.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ChiNhapSo);
-            // 
-            // txtDem
-            // 
-            this.txtDem.BackColor = System.Drawing.Color.DarkGray;
-            // 
-            // 
-            // 
-            this.txtDem.CustomButton.Image = null;
-            this.txtDem.CustomButton.Location = new System.Drawing.Point(240, 1);
-            this.txtDem.CustomButton.Name = "";
-            this.txtDem.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtDem.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtDem.CustomButton.TabIndex = 1;
-            this.txtDem.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtDem.CustomButton.UseSelectable = true;
-            this.txtDem.CustomButton.Visible = false;
-            this.txtDem.DisplayIcon = true;
-            this.txtDem.Icon = ((System.Drawing.Image)(resources.GetObject("txtDem.Icon")));
-            this.txtDem.IconRight = true;
-            this.txtDem.Lines = new string[0];
-            this.txtDem.Location = new System.Drawing.Point(15, 302);
-            this.txtDem.MaxLength = 32767;
-            this.txtDem.Name = "txtDem";
-            this.txtDem.PasswordChar = '\0';
-            this.txtDem.PromptText = "Hệ thống tự tạo nếu bạn để trống";
-            this.txtDem.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtDem.SelectedText = "";
-            this.txtDem.SelectionLength = 0;
-            this.txtDem.SelectionStart = 0;
-            this.txtDem.ShortcutsEnabled = true;
-            this.txtDem.Size = new System.Drawing.Size(262, 23);
-            this.txtDem.TabIndex = 16;
-            this.txtDem.UseSelectable = true;
-            this.txtDem.WaterMark = "Hệ thống tự tạo nếu bạn để trống";
-            this.txtDem.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtDem.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtDem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ChiNhapSo);
-            // 
-            // txtGio
-            // 
-            this.txtGio.BackColor = System.Drawing.Color.DarkGray;
-            // 
-            // 
-            // 
-            this.txtGio.CustomButton.Image = null;
-            this.txtGio.CustomButton.Location = new System.Drawing.Point(240, 1);
-            this.txtGio.CustomButton.Name = "";
-            this.txtGio.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtGio.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtGio.CustomButton.TabIndex = 1;
-            this.txtGio.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtGio.CustomButton.UseSelectable = true;
-            this.txtGio.CustomButton.Visible = false;
-            this.txtGio.DisplayIcon = true;
-            this.txtGio.Icon = ((System.Drawing.Image)(resources.GetObject("txtGio.Icon")));
-            this.txtGio.IconRight = true;
-            this.txtGio.Lines = new string[0];
-            this.txtGio.Location = new System.Drawing.Point(15, 231);
-            this.txtGio.MaxLength = 32767;
-            this.txtGio.Name = "txtGio";
-            this.txtGio.PasswordChar = '\0';
-            this.txtGio.PromptText = "Hệ thống tự tạo nếu bạn để trống";
-            this.txtGio.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtGio.SelectedText = "";
-            this.txtGio.SelectionLength = 0;
-            this.txtGio.SelectionStart = 0;
-            this.txtGio.ShortcutsEnabled = true;
-            this.txtGio.Size = new System.Drawing.Size(262, 23);
-            this.txtGio.TabIndex = 5;
-            this.txtGio.UseSelectable = true;
-            this.txtGio.WaterMark = "Hệ thống tự tạo nếu bạn để trống";
-            this.txtGio.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtGio.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtGio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ChiNhapSo);
             // 
             // panel1
             // 
@@ -569,22 +391,13 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.NumericUpDown nmNguoiToiDa;
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private MetroFramework.Controls.MetroTextBox txtNgay;
-        private MetroFramework.Controls.MetroTextBox txtDem;
-        private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroLabel metroLabel5;
-        private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroComboBox cmbLoaiGiuong;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroComboBox cmbChatLuong;
-        private MetroFramework.Controls.MetroTextBox txtGio;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;

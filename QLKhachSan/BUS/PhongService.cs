@@ -42,6 +42,18 @@ namespace BUS
             }
         }
 
+        public void HienThiDanhSachPhongTheoLoai(FlowLayoutPanel flp , string tenTinhTrangPhong )
+        {
+            
+            List<Phong> phongs = data.LocDanhSachPhong("%", "%", tenTinhTrangPhong);
+            flp.Controls.Clear();
+            foreach (Phong phong in phongs)
+            {
+                RoomExpand room = new RoomExpand(phong);
+                flp.Controls.Add(room);
+            }
+        }
+
         public bool ThemPhong(Phong phong)
         {
             return data.ThemPhong(phong);
@@ -106,5 +118,6 @@ namespace BUS
                 }
             }
         }
+
     }
 }

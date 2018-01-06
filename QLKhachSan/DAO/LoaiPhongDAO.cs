@@ -42,8 +42,8 @@ namespace DAO
 
         public bool ThemLoaiPhong(LoaiPhong loaiPhong)
         {
-            string query = "InsertLoaiPhong @maLoaiPhong  , @tenChatLuong , @tenLoaiGiuong , @giaGio , @giaDem , @giaNgay , @soNguoiToiDa , @hinhMoTa";
-            return provider.ExecuteNonQuery(query , new object[] { loaiPhong.MaLoaiPhong , loaiPhong.TenChatLuong , loaiPhong.TenLoaiGiuong , loaiPhong.GiaGio , loaiPhong.GiaDem , loaiPhong.GiaNgay , loaiPhong.SoNguoiToiDa , loaiPhong.HinhMoTa}) > 0;
+            string query = "InsertLoaiPhong @maLoaiPhong  , @tenChatLuong , @tenLoaiGiuong , @giaNgay , @soNguoiToiDa , @hinhMoTa";
+            return provider.ExecuteNonQuery(query , new object[] { loaiPhong.MaLoaiPhong , loaiPhong.TenChatLuong , loaiPhong.TenLoaiGiuong ,  loaiPhong.GiaNgay , loaiPhong.SoNguoiToiDa , loaiPhong.HinhMoTa}) > 0;
         }
 
         public LoaiPhong LayLoaiPhongBangMa(string maLoaiPhong)

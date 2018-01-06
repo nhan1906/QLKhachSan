@@ -28,5 +28,12 @@ namespace UI
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
         }
+
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+            int soluong = Convert.ToInt32(txtSoLuong.Text);
+            NhanPhong_UC.Instance.sl = soluong;
+            this.Close();
+        }
     }
 }

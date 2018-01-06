@@ -58,7 +58,9 @@
     <Compile Include="PhieuDatCocTienPhongDAO.cs" />
     <Compile Include="PhieuDatPhongDAO.cs" />
     <Compile Include="PhieuNhanPhongDAO.cs" />
+    <Compile Include="PhieuPhuThuDAO.cs" />
     <Compile Include="PhieuSuaChuaDAO.cs" />
+    <Compile Include="PhieuSuDungDichVuDAO.cs" />
     <Compile Include="PhongDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TangDAO.cs" />

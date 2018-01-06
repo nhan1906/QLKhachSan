@@ -14,6 +14,7 @@ namespace DTO
         private string displayname;
         private string maNV;
         private int phanquyen;
+        private string loaiTK;
 
         public Account() { }
 
@@ -24,6 +25,10 @@ namespace DTO
             displayname = row["displayname"].ToString();
             maNV = row["maNV"].ToString();
             phanquyen = (int)row["phanquyen"];
+            if (phanquyen == 0)
+                loaiTK = "Nhân viên";
+            else
+                loaiTK = "Quản lý";
         }
 
         public string Username
@@ -88,6 +93,19 @@ namespace DTO
             set
             {
                 maNV = value;
+            }
+        }
+
+        public string LoaiTK
+        {
+            get
+            {
+                return loaiTK;
+            }
+
+            set
+            {
+                loaiTK = value;
             }
         }
     }

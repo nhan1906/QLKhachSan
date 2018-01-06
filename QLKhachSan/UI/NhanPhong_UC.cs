@@ -16,6 +16,13 @@ namespace UI
     {
 
         private DichVuService dichVuService = DichVuService.Instance;
+        private PhieuSuDungDichVuService phieuSuDungDichVu = PhieuSuDungDichVuService.Instance;
+        private PhieuDatCocTienPhongService phieuDatCocService = PhieuDatCocTienPhongService.Instance;
+
+        //Tính tiền ở đây
+        private ChiTietHoatDongService ctHDService = ChiTietHoatDongService.Instance;
+
+        public int sl = 0;
 
         private static NhanPhong_UC instance;
         public delegate void SendMessage(Panel Message);
@@ -41,14 +48,23 @@ namespace UI
         {
             InitializeComponent();
             instance = this;
-            this.phong = phong;
             Sender = new SendMessage(GetMessage);
-            CapNhat();
+            CapNhat(phong);
         }
 
-        public void CapNhat()
+        public void CapNhat(Phong phongMoi)
         {
+            this.phong = phongMoi;
+            //Cập nhật cơ bản 
             dichVuService.HienThiLenFlowLayoutPanel(flowPanelNhomDV , flpDichVu);
+
+            // Cập nhật thông tin phòng
+            lbPhong.Text = "Tầng " + phong.TangThu + " - " + phong.MaPhong + " - " + phong.LoaiPhong.TenChatLuong + " " + phong.LoaiPhong.TenLoaiGiuong;
+            dichVuService.HienThiThongTinPhongDangSuDung(phong, txtTienDichVu);
+            phieuDatCocService.HienthiTongTienDaDatCocPhongDangSuDung(phong, txtDatCoc);
+            txtMaHoatDong.Text = phong.MaHDHienTai;
+
+            ctHDService.TinhTienPhong(txtTienPhong , phong);
         }
 
         private void Btn_Click(object sender, EventArgs e)
@@ -56,6 +72,11 @@ namespace UI
             DichVu dichVu = (DichVu)((Button)sender).Tag;
             SoLuongDV f = new SoLuongDV(dichVu);
             f.ShowDialog();
+            if(sl != 0)
+            {
+                phieuSuDungDichVu.ThemPhieuSuDungDichVu(dichVu, sl, phong);
+                sl = 0;
+            }
         }
 
         private void flpDichVu_ControlAdded(object sender, ControlEventArgs e)
@@ -67,6 +88,12 @@ namespace UI
         private void btnChuyenPhong_Click(object sender, EventArgs e)
         {
             ChuyenPhongForm f = new ChuyenPhongForm(phong);
+            f.ShowDialog();
+        }
+
+        private void txtPhuThu_ButtonClick(object sender, EventArgs e)
+        {
+            PhuThuForm f = new PhuThuForm();
             f.ShowDialog();
         }
     }

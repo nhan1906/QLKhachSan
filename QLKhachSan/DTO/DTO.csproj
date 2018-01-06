@@ -33,6 +33,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,7 +59,9 @@
     <Compile Include="PhieuDatCocTienPhong.cs" />
     <Compile Include="PhieuDatPhong.cs" />
     <Compile Include="PhieuNhanPhong.cs" />
+    <Compile Include="PhieuPhuThu.cs" />
     <Compile Include="PhieuSuaChua.cs" />
+    <Compile Include="PhieuSuDungDichVu.cs" />
     <Compile Include="Phong.cs" />
     <Compile Include="PhongBan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

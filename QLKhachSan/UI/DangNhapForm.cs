@@ -37,7 +37,8 @@ namespace UI
                 }
                 else {
                     this.Hide();
-                    Main main = new Main(info);
+                    Account accountHT = accountService.LayAccountDangNhap(account.Username);
+                    Main main = new Main(info , accountHT);
                     main.Hide();
                     SplashScreen f = new SplashScreen();
                     f.ShowDialog();
@@ -67,6 +68,11 @@ namespace UI
         {
             error.SetError(txtUsername, "");
             error.SetError(txtPassword, "");
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

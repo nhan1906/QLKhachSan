@@ -208,8 +208,6 @@ CREATE TABLE LoaiPhong
 	maLoaiPhong nvarchar(5) primary key,
 	tenChatLuong nvarchar(10) not null,
 	tenLoaiGiuong nvarchar(10) not null,
-	giaGio float default 0,
-	giaDem float default 0,
 	giaNgay float not null,
 	soNguoiToiDa int default 0,
 	hinhMoTa image
@@ -220,17 +218,15 @@ CREATE PROC InsertLoaiPhong
 @maLoaiPhong nvarchar(5),
 @tenChatLuong nvarchar(10),
 @tenLoaiGiuong nvarchar(10),
-@giaGio float,
-@giaDem float,
 @giaNgay float,
 @soNguoiToiDa int,
 @hinhMoTa image
 AS
 BEGIN
 	INSERT INTO LoaiPhong
-	( maLoaiPhong , tenChatLuong , tenLoaiGiuong , giaGio , giaDem ,giaNgay , soNguoiToiDa , hinhMoTa)
+	( maLoaiPhong , tenChatLuong , tenLoaiGiuong , giaNgay , soNguoiToiDa , hinhMoTa)
 	VALUES
-	( @maLoaiPhong , @tenChatLuong , @tenLoaiGiuong , @giaGio , @giaDem , @giaNgay , @soNguoiToiDa , @hinhMoTa)
+	( @maLoaiPhong , @tenChatLuong , @tenLoaiGiuong , @giaNgay , @soNguoiToiDa , @hinhMoTa)
 END
 GO
 
@@ -561,6 +557,8 @@ CREATE TABLE Account
 )
 GO
 
+
+
 CREATE PROC InsertAccount
 @username nvarchar(30),
 @password nvarchar(1000),
@@ -579,6 +577,7 @@ BEGIN
 	)
 END
 GO
+
 
 InsertAccount N'nhan' , N'246217623212531124222177229148153147175114244', N'Ngọc Nhẫn' , N'NV000001' , 1
 GO
@@ -1025,6 +1024,9 @@ BEGIN
 END
 GO
 
+--------------------------------------------
+-- Đặt cọc tiền
+--------------------------------------------
 CREATE TABLE PhieuDatCocTienPhong
 (
 	idDC int identity,
@@ -1053,6 +1055,54 @@ BEGIN
 	)
 END
 GO
+
+--------------------------------------------
+-- Phiếu Sử dụng dịch vụ
+--------------------------------------------
+CREATE TABLE PhieuSuDungDichVu
+(
+	idSDDV int identity,
+	maSDDV as 'SDDV' + Right('000000' + cast(idSDDV as nvarchar(10)), 6) persisted primary key,
+	maDV nvarchar(8) foreign key references DichVu(maDV),
+	soLuong int,
+	thoiGianNhan Datetime default getDate()
+)
+GO
+
+CREATE PROC InsertPhieuSuDungDichVu
+@maDV nvarchar(8),
+@soLuong int,
+@thoiGianNhan DateTime
+AS
+BEGIN
+	INSERT INTO PhieuSuDungDichVu
+	(
+		maDV , soLuong  , thoiGianNhan
+	)
+	VALUES
+	(
+		@maDV , @soLuong  , @thoiGianNhan
+	)
+END
+GO
+
+-------------------------------------------------------------------------------------------------------------
+-- Hóa đơn
+-------------------------------------------------------------------------------------------------------------
+
+CREATE TABLE PhieuPhuThu
+(
+	idPT int identity,
+	maPT as 'PT' + Right('000000' + cast(idPT as nvarchar(10)), 6) persisted primary key,
+	tienPhuThu float,
+	nguyenNhan nvarchar(1000)
+)
+GO
+
+select * from PhieuNhanPhong inner join ChiTietHoatDong on PhieuNhanPhong.maHD = ChiTietHoatDong.maHD where idLoaiHoatDong = 1
+-------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------
+
 
 -------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------

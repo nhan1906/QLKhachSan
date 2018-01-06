@@ -62,11 +62,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CapLaiMatKhauForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapLaiMatKhauForm.Designer.cs">
+      <DependentUpon>CapLaiMatKhauForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CapNhatSuaPhong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CapNhatSuaPhong.Designer.cs">
       <DependentUpon>CapNhatSuaPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckOutPhongForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckOutPhongForm.Designer.cs">
+      <DependentUpon>CheckOutPhongForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ChonPhongDatPhong.cs">
       <SubType>Form</SubType>
@@ -86,6 +98,12 @@
     <Compile Include="DangNhapForm.Designer.cs">
       <DependentUpon>DangNhapForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DanhSachNhanVienForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhSachNhanVienForm.Designer.cs">
+      <DependentUpon>DanhSachNhanVienForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatCocForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +121,12 @@
     </Compile>
     <Compile Include="DichVu_UC.Designer.cs">
       <DependentUpon>DichVu_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHang_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KhachHang_UC.Designer.cs">
+      <DependentUpon>KhachHang_UC.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -128,6 +152,12 @@
     <Compile Include="NhanPhong_UC.Designer.cs">
       <DependentUpon>NhanPhong_UC.cs</DependentUpon>
     </Compile>
+    <Compile Include="PhuThuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhuThuForm.Designer.cs">
+      <DependentUpon>PhuThuForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuanLyLoaiPhong_UC.cs">
@@ -136,11 +166,23 @@
     <Compile Include="QuanLyLoaiPhong_UC.Designer.cs">
       <DependentUpon>QuanLyLoaiPhong_UC.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyNhanVien_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QuanLyNhanVien_UC.Designer.cs">
+      <DependentUpon>QuanLyNhanVien_UC.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyPhong_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="QuanLyPhong_UC.Designer.cs">
       <DependentUpon>QuanLyPhong_UC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyTaiKhoan_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QuanLyTaiKhoan_UC.Designer.cs">
+      <DependentUpon>QuanLyTaiKhoan_UC.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanLyTang_UC.cs">
       <SubType>UserControl</SubType>
@@ -172,6 +214,12 @@
     <Compile Include="SuaPhong.Designer.cs">
       <DependentUpon>SuaPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="SuaXoaTaiKhoanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuaXoaTaiKhoanForm.Designer.cs">
+      <DependentUpon>SuaXoaTaiKhoanForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThemKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +238,12 @@
     <Compile Include="ThemPhong.Designer.cs">
       <DependentUpon>ThemPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThemTaiKhoanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemTaiKhoanForm.Designer.cs">
+      <DependentUpon>ThemTaiKhoanForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThemTang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,8 +256,14 @@
     <Compile Include="ThongBaoDatPhongThanhCong.Designer.cs">
       <DependentUpon>ThongBaoDatPhongThanhCong.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CapLaiMatKhauForm.resx">
+      <DependentUpon>CapLaiMatKhauForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CapNhatSuaPhong.resx">
       <DependentUpon>CapNhatSuaPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckOutPhongForm.resx">
+      <DependentUpon>CheckOutPhongForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChonPhongDatPhong.resx">
       <DependentUpon>ChonPhongDatPhong.cs</DependentUpon>
@@ -214,6 +274,9 @@
     <EmbeddedResource Include="DangNhapForm.resx">
       <DependentUpon>DangNhapForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DanhSachNhanVienForm.resx">
+      <DependentUpon>DanhSachNhanVienForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DatCocForm.resx">
       <DependentUpon>DatCocForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -223,6 +286,9 @@
     <EmbeddedResource Include="DichVu_UC.resx">
       <DependentUpon>DichVu_UC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="KhachHang_UC.resx">
+      <DependentUpon>KhachHang_UC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,6 +297,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NhanPhong_UC.resx">
       <DependentUpon>NhanPhong_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhuThuForm.resx">
+      <DependentUpon>PhuThuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -245,8 +314,14 @@
     <EmbeddedResource Include="QuanLyLoaiPhong_UC.resx">
       <DependentUpon>QuanLyLoaiPhong_UC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyNhanVien_UC.resx">
+      <DependentUpon>QuanLyNhanVien_UC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLyPhong_UC.resx">
       <DependentUpon>QuanLyPhong_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyTaiKhoan_UC.resx">
+      <DependentUpon>QuanLyTaiKhoan_UC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyTang_UC.resx">
       <DependentUpon>QuanLyTang_UC.cs</DependentUpon>
@@ -263,6 +338,9 @@
     <EmbeddedResource Include="SuaPhong.resx">
       <DependentUpon>SuaPhong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SuaXoaTaiKhoanForm.resx">
+      <DependentUpon>SuaXoaTaiKhoanForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThemKhachHang.resx">
       <DependentUpon>ThemKhachHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -271,6 +349,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThemPhong.resx">
       <DependentUpon>ThemPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemTaiKhoanForm.resx">
+      <DependentUpon>ThemTaiKhoanForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemTang.resx">
       <DependentUpon>ThemTang.cs</DependentUpon>
@@ -346,6 +427,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\sweep.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

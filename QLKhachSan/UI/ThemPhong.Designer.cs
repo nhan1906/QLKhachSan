@@ -45,7 +45,7 @@
             this.metroLabel6.AutoSize = true;
             this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Small;
             this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel6.Location = new System.Drawing.Point(190, 78);
+            this.metroLabel6.Location = new System.Drawing.Point(192, 74);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(178, 15);
             this.metroLabel6.TabIndex = 20;
@@ -57,7 +57,7 @@
             this.lbMaPhong.BackColor = System.Drawing.Color.Black;
             this.lbMaPhong.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lbMaPhong.ForeColor = System.Drawing.Color.White;
-            this.lbMaPhong.Location = new System.Drawing.Point(124, 74);
+            this.lbMaPhong.Location = new System.Drawing.Point(126, 70);
             this.lbMaPhong.Name = "lbMaPhong";
             this.lbMaPhong.Size = new System.Drawing.Size(33, 19);
             this.lbMaPhong.TabIndex = 19;
@@ -69,7 +69,7 @@
             // 
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel4.Location = new System.Drawing.Point(33, 75);
+            this.metroLabel4.Location = new System.Drawing.Point(35, 71);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(76, 19);
             this.metroLabel4.TabIndex = 18;
@@ -87,7 +87,7 @@
             this.btnBack.ForeColor = System.Drawing.Color.White;
             this.btnBack.Image = global::UI.Properties.Resources.back_form;
             this.btnBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBack.Location = new System.Drawing.Point(507, 289);
+            this.btnBack.Location = new System.Drawing.Point(439, 248);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(72, 32);
             this.btnBack.TabIndex = 16;
@@ -100,9 +100,9 @@
             // 
             this.cmbLoaiPhong.FormattingEnabled = true;
             this.cmbLoaiPhong.ItemHeight = 23;
-            this.cmbLoaiPhong.Location = new System.Drawing.Point(33, 228);
+            this.cmbLoaiPhong.Location = new System.Drawing.Point(30, 213);
             this.cmbLoaiPhong.Name = "cmbLoaiPhong";
-            this.cmbLoaiPhong.Size = new System.Drawing.Size(546, 29);
+            this.cmbLoaiPhong.Size = new System.Drawing.Size(481, 29);
             this.cmbLoaiPhong.TabIndex = 15;
             this.cmbLoaiPhong.UseSelectable = true;
             // 
@@ -110,9 +110,9 @@
             // 
             this.cmbTang.FormattingEnabled = true;
             this.cmbTang.ItemHeight = 23;
-            this.cmbTang.Location = new System.Drawing.Point(33, 157);
+            this.cmbTang.Location = new System.Drawing.Point(30, 142);
             this.cmbTang.Name = "cmbTang";
-            this.cmbTang.Size = new System.Drawing.Size(546, 29);
+            this.cmbTang.Size = new System.Drawing.Size(481, 29);
             this.cmbTang.TabIndex = 14;
             this.cmbTang.UseSelectable = true;
             this.cmbTang.SelectedIndexChanged += new System.EventHandler(this.cmbTang_SelectedIndexChanged);
@@ -121,7 +121,7 @@
             // 
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel2.Location = new System.Drawing.Point(33, 196);
+            this.metroLabel2.Location = new System.Drawing.Point(30, 181);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(81, 19);
             this.metroLabel2.TabIndex = 13;
@@ -131,7 +131,7 @@
             // 
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel1.Location = new System.Drawing.Point(33, 124);
+            this.metroLabel1.Location = new System.Drawing.Point(30, 109);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(60, 19);
             this.metroLabel1.TabIndex = 12;
@@ -140,7 +140,7 @@
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(186)))), ((int)(((byte)(195)))));
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(154)))), ((int)(((byte)(163)))));
             this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(154)))), ((int)(((byte)(163)))));
@@ -149,7 +149,7 @@
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Image = global::UI.Properties.Resources.tick_fff;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(300, 289);
+            this.btnSave.Location = new System.Drawing.Point(232, 248);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(61, 32);
             this.btnSave.TabIndex = 17;
@@ -161,7 +161,7 @@
             // btnSaveAndContinue
             // 
             this.btnSaveAndContinue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSaveAndContinue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(186)))), ((int)(((byte)(195)))));
+            this.btnSaveAndContinue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             this.btnSaveAndContinue.FlatAppearance.BorderSize = 0;
             this.btnSaveAndContinue.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(154)))), ((int)(((byte)(163)))));
             this.btnSaveAndContinue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(154)))), ((int)(((byte)(163)))));
@@ -170,7 +170,7 @@
             this.btnSaveAndContinue.ForeColor = System.Drawing.Color.White;
             this.btnSaveAndContinue.Image = global::UI.Properties.Resources.save_fff;
             this.btnSaveAndContinue.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSaveAndContinue.Location = new System.Drawing.Point(367, 289);
+            this.btnSaveAndContinue.Location = new System.Drawing.Point(299, 248);
             this.btnSaveAndContinue.Name = "btnSaveAndContinue";
             this.btnSaveAndContinue.Size = new System.Drawing.Size(134, 32);
             this.btnSaveAndContinue.TabIndex = 17;
@@ -183,7 +183,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(613, 376);
+            this.ClientSize = new System.Drawing.Size(534, 299);
             this.Controls.Add(this.metroLabel6);
             this.Controls.Add(this.lbMaPhong);
             this.Controls.Add(this.metroLabel4);

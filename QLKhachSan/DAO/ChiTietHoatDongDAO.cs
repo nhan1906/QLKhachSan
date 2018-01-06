@@ -1,6 +1,7 @@
 ﻿using DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,5 +41,18 @@ namespace DAO
             return provider.ExecuteQuery("Select * from ChiTietHoatDong where maHD = N'" + maHD + "'").Rows.Count > 0;
         }
 
+        public float TinhTienPhong(Phong phong)
+        {
+            string query = "select * from ChiTietHoatDong inner join PhieuNhanPhong on ChiTietHoatDong.maLQ = PhieuNhanPhong.maNhanPhong where ChiTietHoatDong.maHD = N'" + phong.MaHDHienTai + "' and idLoaiHoatDong = 1";
+            DataTable data = provider.ExecuteQuery(query);
+            PhieuNhanPhong phieuNhanPhong = new PhieuNhanPhong();
+            phieuNhanPhong.CheckIn = (DateTime)data.Rows[0]["checkIn"];
+            phieuNhanPhong.CheckOut = (DateTime)data.Rows[0]["checkOut"];
+            int soNgayDuKien = (phieuNhanPhong.CheckOut - phieuNhanPhong.CheckIn).Add(new TimeSpan(1, 0, 0, 0)).Days;
+            if (phieuNhanPhong.CheckOut > DateTime.Now)
+                return soNgayDuKien * phong.LoaiPhong.GiaNgay;
+            return 0;
+
+        }
     }
 }

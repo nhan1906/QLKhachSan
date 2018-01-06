@@ -40,5 +40,15 @@ namespace DAO
             }
             return list;
         }
+
+        public float TongTienDichVu(string maHDHienTai)
+        {
+            string query = "select Sum(PhieuSuDungDichVu.soLuong * DichVu.donGiaDonVi) from ChiTietHoatDong inner join PhieuSuDungDichVu " +
+                    "on ChiTietHoatDong.maLQ = PhieuSuDungDichVu.maSDDV inner join DichVu on DichVu.maDV = PhieuSuDungDichVu.maDV " +
+                    "where maHD = N'" + maHDHienTai + "'";
+            if (provider.ExecuteScalar(query).ToString() == "")
+                return 0;
+            return (float)((Double)provider.ExecuteScalar(query));
+        }
     }
 }

@@ -13,8 +13,6 @@ namespace DTO
         private string maLoaiPhong;
         private string tenChatLuong;
         private string tenLoaiGiuong;
-        private float giaGio;
-        private float giaDem;
         private float giaNgay;
         private int soNguoiToiDa;
         private byte[] hinhMoTa; 
@@ -57,32 +55,7 @@ namespace DTO
                 tenLoaiGiuong = value;
             }
         }
-
-        public float GiaGio
-        {
-            get
-            {
-                return giaGio;
-            }
-
-            set
-            {
-                giaGio = value;
-            }
-        }
-
-        public float GiaDem
-        {
-            get
-            {
-                return giaDem;
-            }
-
-            set
-            {
-                giaDem = value;
-            }
-        }
+        
 
         public float GiaNgay
         {
@@ -130,9 +103,7 @@ namespace DTO
             MaLoaiPhong = row["maLoaiPhong"].ToString();
             TenLoaiGiuong = row["tenLoaiGiuong"].ToString();
             TenChatLuong = row["tenChatLuong"].ToString();
-
-            GiaGio = (float) Convert.ToDouble(row["giaGio"].ToString());
-            GiaDem = (float)Convert.ToDouble(row["giaDem"].ToString());
+            
             GiaNgay = (float)Convert.ToDouble(row["giaNgay"].ToString());
 
             SoNguoiToiDa = (int)row["soNguoiToiDa"];

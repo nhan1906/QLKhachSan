@@ -1,5 +1,6 @@
 ﻿using DAO;
 using DTO;
+using MetroFramework.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -63,6 +64,14 @@ namespace BUS
                 btnDV.Tag = dv;
                 flpDV.Controls.Add(btnDV);
             }
+        }
+
+
+        public void HienThiThongTinPhongDangSuDung(Phong phong, MetroTextBox txtTienDichVu)
+        {
+            //Lấy tổng tiền dịch vụ
+            float tongTien = data.TongTienDichVu(phong.MaHDHienTai);
+            txtTienDichVu.Text = tongTien.ToString();
         }
     }
 }

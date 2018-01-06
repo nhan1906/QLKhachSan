@@ -37,5 +37,16 @@ namespace DAO
                 return new NhanVien(data.Rows[0]);
             return null;
         }
+
+        public List<NhanVien> DanhSachTatCaNhanVien()
+        {
+            List<NhanVien> list = new List<NhanVien>();
+            DataTable data = provider.ExecuteQuery("select * from NhanVien");
+            foreach(DataRow row in data.Rows)
+            {
+                list.Add(new NhanVien(row));
+            }
+            return list;
+        }
     }
 }

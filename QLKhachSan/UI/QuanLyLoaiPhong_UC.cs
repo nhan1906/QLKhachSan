@@ -54,23 +54,19 @@ namespace UI
 
             dtgvLoaiPhong.Columns.Add("thaoTac", "Thao tác");
 
-            dtgvLoaiPhong.Columns[7].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dtgvLoaiPhong.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dtgvLoaiPhong.Columns[0].Width = 100;
             dtgvLoaiPhong.Columns[1].Width = 100;
             dtgvLoaiPhong.Columns[2].Width = 100;
             dtgvLoaiPhong.Columns[3].Width = 120;
-            dtgvLoaiPhong.Columns[4].Width = 120;
-            dtgvLoaiPhong.Columns[5].Width = 120;
-            dtgvLoaiPhong.Columns[6].Width = 100;
-            dtgvLoaiPhong.Columns[7].Width = 200;
+            dtgvLoaiPhong.Columns[4].Width = 100;
+            dtgvLoaiPhong.Columns[5].Width = 200;
 
             dtgvLoaiPhong.Columns[0].HeaderText = "Mã loại phòng";
             dtgvLoaiPhong.Columns[1].HeaderText = "Tên chất lượng";
             dtgvLoaiPhong.Columns[2].HeaderText = "Tên loại giường";
-            dtgvLoaiPhong.Columns[3].HeaderText = "Giá giờ";
-            dtgvLoaiPhong.Columns[4].HeaderText = "Giá đêm";
-            dtgvLoaiPhong.Columns[5].HeaderText = "Giá ngày";
-            dtgvLoaiPhong.Columns[6].HeaderText = "Số người TĐ";
+            dtgvLoaiPhong.Columns[3].HeaderText = "Giá ngày";
+            dtgvLoaiPhong.Columns[4].HeaderText = "Số người TĐ";
 
             VeView();
         }

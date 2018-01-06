@@ -16,6 +16,7 @@ namespace DTO
         private string tenTinhTrangPhong;
         private int ban;
         private string maHDHienTai;
+        private LoaiPhong loaiPhong;
 
         public int MaPhong
         {
@@ -108,6 +109,19 @@ namespace DTO
             }
         }
 
+        public LoaiPhong LoaiPhong
+        {
+            get
+            {
+                return loaiPhong;
+            }
+
+            set
+            {
+                loaiPhong = value;
+            }
+        }
+
         public Phong() { }
 
         public Phong(DataRow row)
@@ -119,6 +133,9 @@ namespace DTO
             TenTinhTrangPhong = row["tenTinhTrangPhong"].ToString();
             Ban = (int)row["Ban"];
             MaHDHienTai = row["maHDHienTai"].ToString();
+
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from LoaiPhong where maLoaiPhong = N'" + maLoaiPhong + "'");
+            LoaiPhong = new LoaiPhong(data.Rows[0]);
         }
     }
 }

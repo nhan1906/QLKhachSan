@@ -36,11 +36,11 @@ namespace BUS
             rSoPhong = new Rectangle(0, Height / 3, widthLabel, Height / 3);
             rIcon = new Rectangle(widthLabel / 2 - iconSize / 2, 5 * Height / 6 - iconSize / 2, iconSize, iconSize);
             rNuaTren = new Rectangle(widthLabel, 0, Width - widthLabel, Height / 2);
-            rNuaTren = new Rectangle(widthLabel, Height / 2, Width - widthLabel, Height / 2);
+            rNuaDuoi = new Rectangle(widthLabel, Height / 2, Width - widthLabel, Height / 2);
             rTren = new Rectangle(widthLabel, 0, Width - widthLabel, Height / 3);
             rGiua = new Rectangle(widthLabel, Height / 3, Width - widthLabel, Height / 3);
             rDuoi = new Rectangle(widthLabel, 2 * Height / 3, Width - widthLabel, Height / 3);
-            rIconClean = new Rectangle(Width - 15, 5, 10, 10);
+            rIconClean = new Rectangle(Width - 15, 5, 20, 20);
             
             this.Paint += RoomExpand_Paint;
         }
@@ -65,7 +65,12 @@ namespace BUS
             {
                 VeCoBan(0, e);
                 //Vẽ icon
+                StringFormat stringFormat = new StringFormat();
+                stringFormat.Alignment = StringAlignment.Center;
+                stringFormat.LineAlignment = StringAlignment.Center;
+                SolidBrush whiteBrush = new SolidBrush(ColorTranslator.FromHtml("#7CA66E"));
                 e.Graphics.DrawImage(Properties.Resources.tick_fff, rIcon);
+                e.Graphics.DrawString("Trống", new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Pixel), whiteBrush, rMain2, stringFormat);
             }
             else if (phong.TenTinhTrangPhong == "Đã đặt")
             {
@@ -104,13 +109,19 @@ namespace BUS
             else if (phong.TenTinhTrangPhong == "Đang sửa")
             {
                 VeCoBan(6, e);
+
+                StringFormat stringFormat = new StringFormat();
+                stringFormat.Alignment = StringAlignment.Center;
+                stringFormat.LineAlignment = StringAlignment.Center;
+                SolidBrush whiteBrush = new SolidBrush(ColorTranslator.FromHtml("#67838F"));
                 //Vẽ icon
                 e.Graphics.DrawImage(Properties.Resources.tick_fff, rIcon);
+                e.Graphics.DrawString("Đang sửa", new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Pixel), whiteBrush, rNuaDuoi, stringFormat);
             }
 
             if(phong.Ban == 2)
             {
-                e.Graphics.DrawImage(Properties.Resources.bed, rIconClean);
+                e.Graphics.DrawImage(Properties.Resources.sweep, rIconClean);
             }
         }
         

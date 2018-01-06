@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MetroFramework.Controls;
+using DTO;
 
 namespace BUS
 {
@@ -31,6 +33,11 @@ namespace BUS
         public bool KiemTraDaTonTaiMa(string maHD)
         {
             return data.KiemTraMaDaTonTai(maHD);
+        }
+        
+        public void TinhTienPhong(MetroTextBox txtTienPhong, Phong phong)
+        {
+            txtTienPhong.Text = data.TinhTienPhong(phong).ToString();
         }
     }
 }
